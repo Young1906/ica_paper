@@ -50,3 +50,8 @@ def calc_psd(s, _fs = FS, _avg='median', fmax = 100):
     x, y = x[np.where(x<fmax)], y.T[np.where(x<fmax)]
 
     return x, y 
+
+def chunks(l, n):
+    """Yield successive n-sized chunks from l."""
+    for i in range(0, len(l), n):
+        yield l[i:i + n + 1]
