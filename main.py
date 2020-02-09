@@ -26,7 +26,7 @@ def _get_ica_map(ica, components=None):
 
 if __name__ == "__main__":
 
-    path_edf="./edf/1489/1489_alice/edf/A0001489.EDF"
+    path_edf="./edf/1489/1489_alice/edf/A0001489.edf"
     path_stage="./edf/1489/1489_alice/csv/STAGE.csv"
     
     eeg = EEG(path_edf=path_edf, path_stage=path_stage)
@@ -63,7 +63,7 @@ if __name__ == "__main__":
             
             # Apply ICA
             sample_raw_train = sample_raw_bandpass.copy()
-            # sample_raw_corrected = sample_raw_bandpass.copy()
+            sample_raw_corrected = sample_raw_bandpass.copy()
             
             # Train
             ica = ICA(method="extended-infomax", random_state=1)
@@ -81,12 +81,12 @@ if __name__ == "__main__":
 
                 ica.exclude = list_of_eog
                 raw_ = eeg.raw.copy()
-                raw_corrected_ = raw_.copy()
+                # sample_raw_corrected = sample_.copy()
 
-                ica.apply(raw_corrected_)
+                ica.apply(sample_raw_corrected)
 
-                raw_.plot(title="RAW")
-                raw_corrected_.plot(title="RAW_CORRECTED")
+                sample_raw_train.plot(title="RAW")
+                sample_raw_corrected.plot(title="RAW_CORRECTED")
 
                 to_save = input("Save this trunk? [y/n]: ")
                 # print("=================================================================================")

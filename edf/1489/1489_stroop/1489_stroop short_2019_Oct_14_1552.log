@@ -1,0 +1,1437 @@
+9.3964 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0., 0., 0.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002E74FDB2828>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002E74FEBF898>, multiSample=False, name='window1', numSamples=2, pos=[192.0, 108.0], screen=0, size=array([1536,  864]), stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.3964 	EXP 	window1: recordFrameIntervals = False
+9.5625 	EXP 	window1: recordFrameIntervals = True
+9.7460 	EXP 	window1: recordFrameIntervals = False
+9.9158 	EXP 	Created intro_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='intro_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Stroop Colored Word Task', units='norm', win=Window(...), wrapWidth=1)
+9.9615 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+9.9803 	EXP 	Created ready_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='ready_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Are you ready ?\n\nYou have 3s for each word', units='norm', win=Window(...), wrapWidth=1)
+9.9847 	EXP 	Created trial_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='trial_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+9.9900 	EXP 	Created fixationtrial = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixationtrial', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='norm', win=Window(...), wrapWidth=1)
+10.3827 	EXP 	Created trial_display = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='trial_display', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.3870 	EXP 	Created rest_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='rest_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.6801 	EXP 	Sound  set volume 1.000
+10.6802 	EXP 	Sound  set volume 1.000
+10.6855 	EXP 	Created rest_display = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='rest_display', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.6908 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.6938 	EXP 	Created fixationmain = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixationmain', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='norm', win=Window(...), wrapWidth=1)
+10.6983 	EXP 	Created task_display = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='task_display', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.7027 	EXP 	Created rest_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='rest_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.7029 	EXP 	Sound  set volume 1.000
+10.7029 	EXP 	Sound  set volume 1.000
+10.7073 	EXP 	Created rest_display = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='rest_display', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.7118 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.7143 	EXP 	Created fixationmain = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixationmain', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='norm', win=Window(...), wrapWidth=1)
+10.7191 	EXP 	Created task_display = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='task_display', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.7236 	EXP 	Created rest_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='rest_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.7237 	EXP 	Sound  set volume 1.000
+10.7238 	EXP 	Sound  set volume 1.000
+10.7281 	EXP 	Created rest_display = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='rest_display', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.7591 	EXP 	intro_text: autoDraw = True
+14.9023 	DATA 	Keypress: space
+14.9115 	EXP 	intro_text: autoDraw = False
+14.9115 	EXP 	text: autoDraw = True
+31.0125 	DATA 	Keypress: right
+32.0989 	DATA 	Keypress: space
+32.1077 	EXP 	text: autoDraw = False
+32.1077 	EXP 	ready_text: autoDraw = True
+49.0664 	EXP 	Imported Stroop-short-trial-10event.xlsx as conditions, 10 conditions, 4 params
+49.0667 	EXP 	Created sequence: random, trialTypes=10, nReps=1, seed=None
+49.0670 	EXP 	New trial (rep=0, index=0): OrderedDict([('word', 'XANH LÁ'), ('color', 'GREEN'), ('congruent', 1), ('corrans', 'right')])
+49.2140 	EXP 	window1: recordFrameIntervals = False
+49.2213 	DATA 	Keypress: space
+49.2231 	EXP 	ready_text: autoDraw = False
+49.2231 	EXP 	trial_text: color = 'GREEN (named)'
+49.2231 	EXP 	trial_text: text = 'XANH LÁ'
+49.2231 	EXP 	trial_display: color = 'white (named)'
+49.2231 	EXP 	trial_display: pos = array([-0.8,  0.8])
+49.2231 	EXP 	trial_display: text = 'Trial Session'
+49.2231 	EXP 	trial_display: font = 'Arial'
+49.2231 	EXP 	trial_display: height = 0.1
+49.2231 	EXP 	fixationtrial: autoDraw = True
+49.2231 	EXP 	trial_display: autoDraw = True
+49.2231 	EXP 	trial_display: text = 'Trial Session'
+49.2233 	EXP 	window1: recordFrameIntervals = False
+49.8875 	EXP 	trial_text: autoDraw = True
+49.8875 	EXP 	fixationtrial: autoDraw = False
+51.1874 	EXP 	trial_text: autoDraw = False
+52.0390 	EXP 	New trial (rep=0, index=1): OrderedDict([('word', 'VÀNG'), ('color', 'BLUE'), ('congruent', 1), ('corrans', 'up')])
+52.0458 	EXP 	window1: recordFrameIntervals = False
+52.0563 	EXP 	trial_text: autoDraw = False
+52.0563 	EXP 	fixationtrial: autoDraw = False
+52.0563 	EXP 	trial_display: autoDraw = False
+52.0563 	EXP 	trial_text: color = 'BLUE (named)'
+52.0563 	EXP 	trial_text: text = 'VÀNG'
+52.0563 	EXP 	trial_display: color = 'white (named)'
+52.0563 	EXP 	trial_display: pos = array([-0.8,  0.8])
+52.0563 	EXP 	trial_display: text = 'Trial Session'
+52.0563 	EXP 	trial_display: font = 'Arial'
+52.0563 	EXP 	trial_display: height = 0.1
+52.0563 	EXP 	fixationtrial: autoDraw = True
+52.0563 	EXP 	trial_display: autoDraw = True
+52.0563 	EXP 	trial_display: text = 'Trial Session'
+52.0566 	EXP 	window1: recordFrameIntervals = False
+52.8539 	EXP 	fixationtrial: autoDraw = False
+52.8705 	EXP 	trial_text: autoDraw = True
+53.7247 	DATA 	Keypress: right
+54.1536 	EXP 	trial_text: autoDraw = False
+54.3921 	DATA 	Keypress: down
+55.0385 	EXP 	New trial (rep=0, index=2): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'BLUE'), ('congruent', 1), ('corrans', 'down')])
+55.0521 	EXP 	window1: recordFrameIntervals = False
+55.0598 	EXP 	trial_text: autoDraw = False
+55.0598 	EXP 	fixationtrial: autoDraw = False
+55.0598 	EXP 	trial_display: autoDraw = False
+55.0598 	EXP 	trial_text: color = 'BLUE (named)'
+55.0598 	EXP 	trial_text: text = 'XANH DƯƠNG'
+55.0598 	EXP 	trial_display: color = 'white (named)'
+55.0598 	EXP 	trial_display: pos = array([-0.8,  0.8])
+55.0598 	EXP 	trial_display: text = 'Trial Session'
+55.0598 	EXP 	trial_display: font = 'Arial'
+55.0598 	EXP 	trial_display: height = 0.1
+55.0598 	EXP 	fixationtrial: autoDraw = True
+55.0598 	EXP 	trial_display: autoDraw = True
+55.0598 	EXP 	trial_display: text = 'Trial Session'
+55.0600 	EXP 	window1: recordFrameIntervals = False
+55.8533 	EXP 	fixationtrial: autoDraw = False
+55.8699 	EXP 	trial_text: autoDraw = True
+56.3578 	DATA 	Keypress: down
+57.1532 	EXP 	trial_text: autoDraw = False
+58.0375 	EXP 	New trial (rep=0, index=3): OrderedDict([('word', 'ĐỎ'), ('color', 'GREEN'), ('congruent', 1), ('corrans', 'left')])
+58.0435 	EXP 	window1: recordFrameIntervals = False
+58.0530 	EXP 	trial_text: autoDraw = False
+58.0530 	EXP 	fixationtrial: autoDraw = False
+58.0530 	EXP 	trial_display: autoDraw = False
+58.0530 	EXP 	trial_text: color = 'GREEN (named)'
+58.0530 	EXP 	trial_text: text = 'ĐỎ'
+58.0530 	EXP 	trial_display: color = 'white (named)'
+58.0530 	EXP 	trial_display: pos = array([-0.8,  0.8])
+58.0530 	EXP 	trial_display: text = 'Trial Session'
+58.0530 	EXP 	trial_display: font = 'Arial'
+58.0530 	EXP 	trial_display: height = 0.1
+58.0530 	EXP 	fixationtrial: autoDraw = True
+58.0530 	EXP 	trial_display: autoDraw = True
+58.0530 	EXP 	trial_display: text = 'Trial Session'
+58.0535 	EXP 	window1: recordFrameIntervals = False
+58.8526 	EXP 	fixationtrial: autoDraw = False
+58.8691 	EXP 	trial_text: autoDraw = True
+59.6570 	DATA 	Keypress: left
+60.0740 	DATA 	Keypress: up
+60.1524 	EXP 	trial_text: autoDraw = False
+60.2567 	DATA 	Keypress: right
+61.0370 	EXP 	New trial (rep=0, index=4): OrderedDict([('word', 'VÀNG'), ('color', 'YELLOW'), ('congruent', 1), ('corrans', 'up')])
+61.0408 	EXP 	window1: recordFrameIntervals = False
+61.0522 	EXP 	trial_text: autoDraw = False
+61.0522 	EXP 	fixationtrial: autoDraw = False
+61.0522 	EXP 	trial_display: autoDraw = False
+61.0522 	EXP 	trial_text: color = 'YELLOW (named)'
+61.0522 	EXP 	trial_text: text = 'VÀNG'
+61.0522 	EXP 	trial_display: color = 'white (named)'
+61.0522 	EXP 	trial_display: pos = array([-0.8,  0.8])
+61.0522 	EXP 	trial_display: text = 'Trial Session'
+61.0522 	EXP 	trial_display: font = 'Arial'
+61.0522 	EXP 	trial_display: height = 0.1
+61.0522 	EXP 	fixationtrial: autoDraw = True
+61.0522 	EXP 	trial_display: autoDraw = True
+61.0522 	EXP 	trial_display: text = 'Trial Session'
+61.0524 	EXP 	window1: recordFrameIntervals = False
+61.8521 	EXP 	fixationtrial: autoDraw = False
+61.8685 	EXP 	trial_text: autoDraw = True
+63.0405 	DATA 	Keypress: up
+63.1517 	EXP 	trial_text: autoDraw = False
+64.0364 	EXP 	New trial (rep=0, index=5): OrderedDict([('word', 'VÀNG'), ('color', 'YELLOW'), ('congruent', 1), ('corrans', 'up')])
+64.0371 	EXP 	window1: recordFrameIntervals = False
+64.0521 	EXP 	trial_text: autoDraw = False
+64.0521 	EXP 	fixationtrial: autoDraw = False
+64.0521 	EXP 	trial_display: autoDraw = False
+64.0521 	EXP 	trial_text: color = 'YELLOW (named)'
+64.0521 	EXP 	trial_text: text = 'VÀNG'
+64.0521 	EXP 	trial_display: color = 'white (named)'
+64.0521 	EXP 	trial_display: pos = array([-0.8,  0.8])
+64.0521 	EXP 	trial_display: text = 'Trial Session'
+64.0521 	EXP 	trial_display: font = 'Arial'
+64.0521 	EXP 	trial_display: height = 0.1
+64.0521 	EXP 	fixationtrial: autoDraw = True
+64.0521 	EXP 	trial_display: autoDraw = True
+64.0521 	EXP 	trial_display: text = 'Trial Session'
+64.0524 	EXP 	window1: recordFrameIntervals = False
+64.8515 	EXP 	fixationtrial: autoDraw = False
+64.8680 	EXP 	trial_text: autoDraw = True
+65.4063 	DATA 	Keypress: up
+66.1510 	EXP 	trial_text: autoDraw = False
+67.0354 	EXP 	New trial (rep=0, index=6): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+67.0385 	EXP 	window1: recordFrameIntervals = False
+67.0507 	EXP 	trial_text: autoDraw = False
+67.0507 	EXP 	fixationtrial: autoDraw = False
+67.0507 	EXP 	trial_display: autoDraw = False
+67.0507 	EXP 	trial_text: color = 'RED (named)'
+67.0507 	EXP 	trial_text: text = 'ĐỎ'
+67.0507 	EXP 	trial_display: color = 'white (named)'
+67.0507 	EXP 	trial_display: pos = array([-0.8,  0.8])
+67.0507 	EXP 	trial_display: text = 'Trial Session'
+67.0507 	EXP 	trial_display: font = 'Arial'
+67.0507 	EXP 	trial_display: height = 0.1
+67.0507 	EXP 	fixationtrial: autoDraw = True
+67.0507 	EXP 	trial_display: autoDraw = True
+67.0507 	EXP 	trial_display: text = 'Trial Session'
+67.0508 	EXP 	window1: recordFrameIntervals = False
+67.8509 	EXP 	fixationtrial: autoDraw = False
+67.8679 	EXP 	trial_text: autoDraw = True
+68.3055 	DATA 	Keypress: left
+69.1505 	EXP 	trial_text: autoDraw = False
+70.0353 	EXP 	New trial (rep=0, index=7): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+70.0359 	EXP 	window1: recordFrameIntervals = False
+70.0505 	EXP 	trial_text: autoDraw = False
+70.0505 	EXP 	fixationtrial: autoDraw = False
+70.0505 	EXP 	trial_display: autoDraw = False
+70.0505 	EXP 	trial_text: color = 'RED (named)'
+70.0505 	EXP 	trial_text: text = 'ĐỎ'
+70.0505 	EXP 	trial_display: color = 'white (named)'
+70.0505 	EXP 	trial_display: pos = array([-0.8,  0.8])
+70.0505 	EXP 	trial_display: text = 'Trial Session'
+70.0505 	EXP 	trial_display: font = 'Arial'
+70.0505 	EXP 	trial_display: height = 0.1
+70.0505 	EXP 	fixationtrial: autoDraw = True
+70.0505 	EXP 	trial_display: autoDraw = True
+70.0505 	EXP 	trial_display: text = 'Trial Session'
+70.0511 	EXP 	window1: recordFrameIntervals = False
+70.8504 	EXP 	fixationtrial: autoDraw = False
+70.8669 	EXP 	trial_text: autoDraw = True
+71.5722 	DATA 	Keypress: left
+72.1500 	EXP 	trial_text: autoDraw = False
+73.0349 	EXP 	New trial (rep=0, index=8): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'BLUE'), ('congruent', 1), ('corrans', 'down')])
+73.0412 	EXP 	window1: recordFrameIntervals = False
+73.0509 	EXP 	trial_text: autoDraw = False
+73.0509 	EXP 	fixationtrial: autoDraw = False
+73.0509 	EXP 	trial_display: autoDraw = False
+73.0509 	EXP 	trial_text: color = 'BLUE (named)'
+73.0509 	EXP 	trial_text: text = 'XANH DƯƠNG'
+73.0509 	EXP 	trial_display: color = 'white (named)'
+73.0509 	EXP 	trial_display: pos = array([-0.8,  0.8])
+73.0509 	EXP 	trial_display: text = 'Trial Session'
+73.0509 	EXP 	trial_display: font = 'Arial'
+73.0509 	EXP 	trial_display: height = 0.1
+73.0509 	EXP 	fixationtrial: autoDraw = True
+73.0509 	EXP 	trial_display: autoDraw = True
+73.0509 	EXP 	trial_display: text = 'Trial Session'
+73.0518 	EXP 	window1: recordFrameIntervals = False
+73.8500 	EXP 	fixationtrial: autoDraw = False
+73.8668 	EXP 	trial_text: autoDraw = True
+74.7704 	DATA 	Keypress: down
+75.1493 	EXP 	trial_text: autoDraw = False
+76.0341 	EXP 	New trial (rep=0, index=9): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+76.0374 	EXP 	window1: recordFrameIntervals = False
+76.0491 	EXP 	trial_text: autoDraw = False
+76.0491 	EXP 	fixationtrial: autoDraw = False
+76.0491 	EXP 	trial_display: autoDraw = False
+76.0491 	EXP 	trial_text: color = 'RED (named)'
+76.0491 	EXP 	trial_text: text = 'ĐỎ'
+76.0491 	EXP 	trial_display: color = 'white (named)'
+76.0491 	EXP 	trial_display: pos = array([-0.8,  0.8])
+76.0491 	EXP 	trial_display: text = 'Trial Session'
+76.0491 	EXP 	trial_display: font = 'Arial'
+76.0491 	EXP 	trial_display: height = 0.1
+76.0491 	EXP 	fixationtrial: autoDraw = True
+76.0491 	EXP 	trial_display: autoDraw = True
+76.0491 	EXP 	trial_display: text = 'Trial Session'
+76.0494 	EXP 	window1: recordFrameIntervals = False
+76.8488 	EXP 	fixationtrial: autoDraw = False
+76.8655 	EXP 	trial_text: autoDraw = True
+77.5206 	DATA 	Keypress: left
+78.1488 	EXP 	trial_text: autoDraw = False
+79.0742 	EXP 	trial_text: autoDraw = False
+79.0742 	EXP 	fixationtrial: autoDraw = False
+79.0742 	EXP 	trial_display: autoDraw = False
+79.0742 	EXP 	rest_text: text = '+'
+79.0742 	EXP 	rest_display: color = 'white (named)'
+79.0742 	EXP 	rest_display: pos = array([-0.8,  0.8])
+79.0742 	EXP 	rest_display: text = 'Rest Session'
+79.0742 	EXP 	rest_display: font = 'Arial'
+79.0742 	EXP 	rest_display: height = 0.1
+79.0742 	EXP 	rest_text: autoDraw = True
+79.0742 	EXP 	rest_display: autoDraw = True
+79.0742 	EXP 	rest_display: text = 'Rest Session'
+109.0396 	EXP 	Imported Stroopmain-short-inverse5eventx3.xlsx as conditions, 5 conditions, 4 params
+109.0399 	EXP 	Created sequence: random, trialTypes=5, nReps=6, seed=None
+109.0402 	EXP 	New trial (rep=0, index=0): OrderedDict([('word', 'ĐỎ'), ('color', 'YELLOW'), ('congruent', 0), ('corrans', 'left')])
+109.0770 	EXP 	rest_text: autoDraw = False
+109.0770 	EXP 	rest_display: autoDraw = False
+109.0770 	EXP 	text_2: color = 'YELLOW (named)'
+109.0770 	EXP 	text_2: text = 'ĐỎ'
+109.0770 	EXP 	task_display: color = 'white (named)'
+109.0770 	EXP 	task_display: pos = array([-0.8,  0.8])
+109.0770 	EXP 	task_display: text = 'Task session'
+109.0770 	EXP 	task_display: font = 'Arial'
+109.0770 	EXP 	task_display: height = 0.1
+109.0770 	EXP 	fixationmain: autoDraw = True
+109.0770 	EXP 	task_display: autoDraw = True
+109.0770 	EXP 	task_display: text = 'Task session'
+109.8596 	EXP 	text_2: autoDraw = True
+109.8596 	EXP 	fixationmain: autoDraw = False
+110.8135 	DATA 	Keypress: up
+111.1589 	EXP 	text_2: autoDraw = False
+112.0274 	EXP 	New trial (rep=0, index=1): OrderedDict([('word', 'VÀNG'), ('color', 'RED'), ('congruent', 0), ('corrans', 'up')])
+112.0423 	EXP 	text_2: autoDraw = False
+112.0423 	EXP 	fixationmain: autoDraw = False
+112.0423 	EXP 	task_display: autoDraw = False
+112.0423 	EXP 	text_2: color = 'RED (named)'
+112.0423 	EXP 	text_2: text = 'VÀNG'
+112.0423 	EXP 	task_display: color = 'white (named)'
+112.0423 	EXP 	task_display: pos = array([-0.8,  0.8])
+112.0423 	EXP 	task_display: text = 'Task session'
+112.0423 	EXP 	task_display: font = 'Arial'
+112.0423 	EXP 	task_display: height = 0.1
+112.0423 	EXP 	fixationmain: autoDraw = True
+112.0423 	EXP 	task_display: autoDraw = True
+112.0423 	EXP 	task_display: text = 'Task session'
+112.8419 	EXP 	fixationmain: autoDraw = False
+112.8584 	EXP 	text_2: autoDraw = True
+113.9123 	DATA 	Keypress: left
+114.1418 	EXP 	text_2: autoDraw = False
+115.0280 	EXP 	New trial (rep=0, index=2): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'GREEN'), ('congruent', 1), ('corrans', 'down')])
+115.0434 	EXP 	task_display: autoDraw = False
+115.0434 	EXP 	text_2: autoDraw = False
+115.0434 	EXP 	fixationmain: autoDraw = False
+115.0434 	EXP 	task_display: autoDraw = False
+115.0434 	EXP 	text_2: color = 'GREEN (named)'
+115.0434 	EXP 	text_2: text = 'XANH DƯƠNG'
+115.0434 	EXP 	task_display: color = 'white (named)'
+115.0434 	EXP 	task_display: pos = array([-0.8,  0.8])
+115.0434 	EXP 	task_display: text = 'Task session'
+115.0434 	EXP 	task_display: font = 'Arial'
+115.0434 	EXP 	task_display: height = 0.1
+115.0434 	EXP 	fixationmain: autoDraw = True
+115.0434 	EXP 	task_display: autoDraw = True
+115.0434 	EXP 	task_display: text = 'Task session'
+115.8414 	EXP 	fixationmain: autoDraw = False
+115.8580 	EXP 	text_2: autoDraw = True
+116.6129 	DATA 	Keypress: right
+117.1411 	EXP 	text_2: autoDraw = False
+118.0275 	EXP 	New trial (rep=0, index=3): OrderedDict([('word', 'XANH LÁ'), ('color', 'BLUE'), ('congruent', 1), ('corrans', 'right')])
+118.0429 	EXP 	task_display: autoDraw = False
+118.0429 	EXP 	text_2: autoDraw = False
+118.0429 	EXP 	fixationmain: autoDraw = False
+118.0429 	EXP 	task_display: autoDraw = False
+118.0429 	EXP 	text_2: color = 'BLUE (named)'
+118.0429 	EXP 	text_2: text = 'XANH LÁ'
+118.0429 	EXP 	task_display: color = 'white (named)'
+118.0429 	EXP 	task_display: pos = array([-0.8,  0.8])
+118.0429 	EXP 	task_display: text = 'Task session'
+118.0429 	EXP 	task_display: font = 'Arial'
+118.0429 	EXP 	task_display: height = 0.1
+118.0429 	EXP 	fixationmain: autoDraw = True
+118.0429 	EXP 	task_display: autoDraw = True
+118.0429 	EXP 	task_display: text = 'Task session'
+118.8405 	EXP 	fixationmain: autoDraw = False
+118.8575 	EXP 	text_2: autoDraw = True
+119.6623 	DATA 	Keypress: down
+120.1402 	EXP 	text_2: autoDraw = False
+121.0261 	EXP 	New trial (rep=0, index=4): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+121.0402 	EXP 	task_display: autoDraw = False
+121.0402 	EXP 	text_2: autoDraw = False
+121.0402 	EXP 	fixationmain: autoDraw = False
+121.0402 	EXP 	task_display: autoDraw = False
+121.0402 	EXP 	text_2: color = 'RED (named)'
+121.0402 	EXP 	text_2: text = 'ĐỎ'
+121.0402 	EXP 	task_display: color = 'white (named)'
+121.0402 	EXP 	task_display: pos = array([-0.8,  0.8])
+121.0402 	EXP 	task_display: text = 'Task session'
+121.0402 	EXP 	task_display: font = 'Arial'
+121.0402 	EXP 	task_display: height = 0.1
+121.0402 	EXP 	fixationmain: autoDraw = True
+121.0402 	EXP 	task_display: autoDraw = True
+121.0402 	EXP 	task_display: text = 'Task session'
+121.8400 	EXP 	fixationmain: autoDraw = False
+121.8565 	EXP 	text_2: autoDraw = True
+122.2780 	DATA 	Keypress: left
+123.1399 	EXP 	text_2: autoDraw = False
+124.0262 	EXP 	New trial (rep=1, index=0): OrderedDict([('word', 'ĐỎ'), ('color', 'YELLOW'), ('congruent', 0), ('corrans', 'left')])
+124.0396 	EXP 	task_display: autoDraw = False
+124.0396 	EXP 	text_2: autoDraw = False
+124.0396 	EXP 	fixationmain: autoDraw = False
+124.0396 	EXP 	task_display: autoDraw = False
+124.0396 	EXP 	text_2: color = 'YELLOW (named)'
+124.0396 	EXP 	text_2: text = 'ĐỎ'
+124.0396 	EXP 	task_display: color = 'white (named)'
+124.0396 	EXP 	task_display: pos = array([-0.8,  0.8])
+124.0396 	EXP 	task_display: text = 'Task session'
+124.0396 	EXP 	task_display: font = 'Arial'
+124.0396 	EXP 	task_display: height = 0.1
+124.0396 	EXP 	fixationmain: autoDraw = True
+124.0396 	EXP 	task_display: autoDraw = True
+124.0396 	EXP 	task_display: text = 'Task session'
+124.8394 	EXP 	fixationmain: autoDraw = False
+124.8561 	EXP 	text_2: autoDraw = True
+125.7774 	DATA 	Keypress: up
+126.1393 	EXP 	text_2: autoDraw = False
+127.0250 	EXP 	New trial (rep=1, index=1): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'GREEN'), ('congruent', 1), ('corrans', 'down')])
+127.0394 	EXP 	task_display: autoDraw = False
+127.0394 	EXP 	text_2: autoDraw = False
+127.0394 	EXP 	fixationmain: autoDraw = False
+127.0394 	EXP 	task_display: autoDraw = False
+127.0394 	EXP 	text_2: color = 'GREEN (named)'
+127.0394 	EXP 	text_2: text = 'XANH DƯƠNG'
+127.0394 	EXP 	task_display: color = 'white (named)'
+127.0394 	EXP 	task_display: pos = array([-0.8,  0.8])
+127.0394 	EXP 	task_display: text = 'Task session'
+127.0394 	EXP 	task_display: font = 'Arial'
+127.0394 	EXP 	task_display: height = 0.1
+127.0394 	EXP 	fixationmain: autoDraw = True
+127.0394 	EXP 	task_display: autoDraw = True
+127.0394 	EXP 	task_display: text = 'Task session'
+127.8394 	EXP 	fixationmain: autoDraw = False
+127.8560 	EXP 	text_2: autoDraw = True
+129.1385 	EXP 	text_2: autoDraw = False
+130.0243 	EXP 	New trial (rep=1, index=2): OrderedDict([('word', 'XANH LÁ'), ('color', 'BLUE'), ('congruent', 1), ('corrans', 'right')])
+130.0542 	EXP 	task_display: autoDraw = False
+130.0542 	EXP 	text_2: autoDraw = False
+130.0542 	EXP 	fixationmain: autoDraw = False
+130.0542 	EXP 	task_display: autoDraw = False
+130.0542 	EXP 	text_2: color = 'BLUE (named)'
+130.0542 	EXP 	text_2: text = 'XANH LÁ'
+130.0542 	EXP 	task_display: color = 'white (named)'
+130.0542 	EXP 	task_display: pos = array([-0.8,  0.8])
+130.0542 	EXP 	task_display: text = 'Task session'
+130.0542 	EXP 	task_display: font = 'Arial'
+130.0542 	EXP 	task_display: height = 0.1
+130.0542 	EXP 	fixationmain: autoDraw = True
+130.0542 	EXP 	task_display: autoDraw = True
+130.0542 	EXP 	task_display: text = 'Task session'
+130.8383 	EXP 	fixationmain: autoDraw = False
+130.8547 	EXP 	text_2: autoDraw = True
+131.7263 	DATA 	Keypress: down
+132.1379 	EXP 	text_2: autoDraw = False
+133.0239 	EXP 	New trial (rep=1, index=3): OrderedDict([('word', 'VÀNG'), ('color', 'RED'), ('congruent', 0), ('corrans', 'up')])
+133.0386 	EXP 	task_display: autoDraw = False
+133.0386 	EXP 	text_2: autoDraw = False
+133.0386 	EXP 	fixationmain: autoDraw = False
+133.0386 	EXP 	task_display: autoDraw = False
+133.0386 	EXP 	text_2: color = 'RED (named)'
+133.0386 	EXP 	text_2: text = 'VÀNG'
+133.0386 	EXP 	task_display: color = 'white (named)'
+133.0386 	EXP 	task_display: pos = array([-0.8,  0.8])
+133.0386 	EXP 	task_display: text = 'Task session'
+133.0386 	EXP 	task_display: font = 'Arial'
+133.0386 	EXP 	task_display: height = 0.1
+133.0386 	EXP 	fixationmain: autoDraw = True
+133.0386 	EXP 	task_display: autoDraw = True
+133.0386 	EXP 	task_display: text = 'Task session'
+133.8377 	EXP 	fixationmain: autoDraw = False
+133.8543 	EXP 	text_2: autoDraw = True
+134.3594 	DATA 	Keypress: left
+135.1374 	EXP 	text_2: autoDraw = False
+136.0243 	EXP 	New trial (rep=1, index=4): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+136.0381 	EXP 	task_display: autoDraw = False
+136.0381 	EXP 	text_2: autoDraw = False
+136.0381 	EXP 	fixationmain: autoDraw = False
+136.0381 	EXP 	task_display: autoDraw = False
+136.0381 	EXP 	text_2: color = 'RED (named)'
+136.0381 	EXP 	text_2: text = 'ĐỎ'
+136.0381 	EXP 	task_display: color = 'white (named)'
+136.0381 	EXP 	task_display: pos = array([-0.8,  0.8])
+136.0381 	EXP 	task_display: text = 'Task session'
+136.0381 	EXP 	task_display: font = 'Arial'
+136.0381 	EXP 	task_display: height = 0.1
+136.0381 	EXP 	fixationmain: autoDraw = True
+136.0381 	EXP 	task_display: autoDraw = True
+136.0381 	EXP 	task_display: text = 'Task session'
+136.8371 	EXP 	fixationmain: autoDraw = False
+136.8537 	EXP 	text_2: autoDraw = True
+137.3247 	DATA 	Keypress: left
+138.1371 	EXP 	text_2: autoDraw = False
+139.0232 	EXP 	New trial (rep=2, index=0): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+139.0370 	EXP 	task_display: autoDraw = False
+139.0370 	EXP 	text_2: autoDraw = False
+139.0370 	EXP 	fixationmain: autoDraw = False
+139.0370 	EXP 	task_display: autoDraw = False
+139.0370 	EXP 	text_2: color = 'RED (named)'
+139.0370 	EXP 	text_2: text = 'ĐỎ'
+139.0370 	EXP 	task_display: color = 'white (named)'
+139.0370 	EXP 	task_display: pos = array([-0.8,  0.8])
+139.0370 	EXP 	task_display: text = 'Task session'
+139.0370 	EXP 	task_display: font = 'Arial'
+139.0370 	EXP 	task_display: height = 0.1
+139.0370 	EXP 	fixationmain: autoDraw = True
+139.0370 	EXP 	task_display: autoDraw = True
+139.0370 	EXP 	task_display: text = 'Task session'
+139.8367 	EXP 	fixationmain: autoDraw = False
+139.8534 	EXP 	text_2: autoDraw = True
+140.2740 	DATA 	Keypress: left
+141.1366 	EXP 	text_2: autoDraw = False
+142.0230 	EXP 	New trial (rep=2, index=1): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'GREEN'), ('congruent', 1), ('corrans', 'down')])
+142.0389 	EXP 	task_display: autoDraw = False
+142.0389 	EXP 	text_2: autoDraw = False
+142.0389 	EXP 	fixationmain: autoDraw = False
+142.0389 	EXP 	task_display: autoDraw = False
+142.0389 	EXP 	text_2: color = 'GREEN (named)'
+142.0389 	EXP 	text_2: text = 'XANH DƯƠNG'
+142.0389 	EXP 	task_display: color = 'white (named)'
+142.0389 	EXP 	task_display: pos = array([-0.8,  0.8])
+142.0389 	EXP 	task_display: text = 'Task session'
+142.0389 	EXP 	task_display: font = 'Arial'
+142.0389 	EXP 	task_display: height = 0.1
+142.0389 	EXP 	fixationmain: autoDraw = True
+142.0389 	EXP 	task_display: autoDraw = True
+142.0389 	EXP 	task_display: text = 'Task session'
+142.8358 	EXP 	fixationmain: autoDraw = False
+142.8528 	EXP 	text_2: autoDraw = True
+143.8734 	DATA 	Keypress: right
+144.1356 	EXP 	text_2: autoDraw = False
+145.0219 	EXP 	New trial (rep=2, index=2): OrderedDict([('word', 'VÀNG'), ('color', 'RED'), ('congruent', 0), ('corrans', 'up')])
+145.0360 	EXP 	task_display: autoDraw = False
+145.0360 	EXP 	text_2: autoDraw = False
+145.0360 	EXP 	fixationmain: autoDraw = False
+145.0360 	EXP 	task_display: autoDraw = False
+145.0360 	EXP 	text_2: color = 'RED (named)'
+145.0360 	EXP 	text_2: text = 'VÀNG'
+145.0360 	EXP 	task_display: color = 'white (named)'
+145.0360 	EXP 	task_display: pos = array([-0.8,  0.8])
+145.0360 	EXP 	task_display: text = 'Task session'
+145.0360 	EXP 	task_display: font = 'Arial'
+145.0360 	EXP 	task_display: height = 0.1
+145.0360 	EXP 	fixationmain: autoDraw = True
+145.0360 	EXP 	task_display: autoDraw = True
+145.0360 	EXP 	task_display: text = 'Task session'
+145.8352 	EXP 	fixationmain: autoDraw = False
+145.8521 	EXP 	text_2: autoDraw = True
+146.7563 	DATA 	Keypress: left
+147.1349 	EXP 	text_2: autoDraw = False
+148.0215 	EXP 	New trial (rep=2, index=3): OrderedDict([('word', 'XANH LÁ'), ('color', 'BLUE'), ('congruent', 1), ('corrans', 'right')])
+148.0371 	EXP 	task_display: autoDraw = False
+148.0371 	EXP 	text_2: autoDraw = False
+148.0371 	EXP 	fixationmain: autoDraw = False
+148.0371 	EXP 	task_display: autoDraw = False
+148.0371 	EXP 	text_2: color = 'BLUE (named)'
+148.0371 	EXP 	text_2: text = 'XANH LÁ'
+148.0371 	EXP 	task_display: color = 'white (named)'
+148.0371 	EXP 	task_display: pos = array([-0.8,  0.8])
+148.0371 	EXP 	task_display: text = 'Task session'
+148.0371 	EXP 	task_display: font = 'Arial'
+148.0371 	EXP 	task_display: height = 0.1
+148.0371 	EXP 	fixationmain: autoDraw = True
+148.0371 	EXP 	task_display: autoDraw = True
+148.0371 	EXP 	task_display: text = 'Task session'
+148.8346 	EXP 	fixationmain: autoDraw = False
+148.8514 	EXP 	text_2: autoDraw = True
+149.6724 	DATA 	Keypress: down
+150.1346 	EXP 	text_2: autoDraw = False
+151.0205 	EXP 	New trial (rep=2, index=4): OrderedDict([('word', 'ĐỎ'), ('color', 'YELLOW'), ('congruent', 0), ('corrans', 'left')])
+151.0345 	EXP 	task_display: autoDraw = False
+151.0345 	EXP 	text_2: autoDraw = False
+151.0345 	EXP 	fixationmain: autoDraw = False
+151.0345 	EXP 	task_display: autoDraw = False
+151.0345 	EXP 	text_2: color = 'YELLOW (named)'
+151.0345 	EXP 	text_2: text = 'ĐỎ'
+151.0345 	EXP 	task_display: color = 'white (named)'
+151.0345 	EXP 	task_display: pos = array([-0.8,  0.8])
+151.0345 	EXP 	task_display: text = 'Task session'
+151.0345 	EXP 	task_display: font = 'Arial'
+151.0345 	EXP 	task_display: height = 0.1
+151.0345 	EXP 	fixationmain: autoDraw = True
+151.0345 	EXP 	task_display: autoDraw = True
+151.0345 	EXP 	task_display: text = 'Task session'
+151.8342 	EXP 	fixationmain: autoDraw = False
+151.8510 	EXP 	text_2: autoDraw = True
+152.5886 	DATA 	Keypress: up
+153.1340 	EXP 	text_2: autoDraw = False
+154.0207 	EXP 	New trial (rep=3, index=0): OrderedDict([('word', 'XANH LÁ'), ('color', 'BLUE'), ('congruent', 1), ('corrans', 'right')])
+154.0375 	EXP 	task_display: autoDraw = False
+154.0375 	EXP 	text_2: autoDraw = False
+154.0375 	EXP 	fixationmain: autoDraw = False
+154.0375 	EXP 	task_display: autoDraw = False
+154.0375 	EXP 	text_2: color = 'BLUE (named)'
+154.0375 	EXP 	text_2: text = 'XANH LÁ'
+154.0375 	EXP 	task_display: color = 'white (named)'
+154.0375 	EXP 	task_display: pos = array([-0.8,  0.8])
+154.0375 	EXP 	task_display: text = 'Task session'
+154.0375 	EXP 	task_display: font = 'Arial'
+154.0375 	EXP 	task_display: height = 0.1
+154.0375 	EXP 	fixationmain: autoDraw = True
+154.0375 	EXP 	task_display: autoDraw = True
+154.0375 	EXP 	task_display: text = 'Task session'
+154.8338 	EXP 	fixationmain: autoDraw = False
+154.8503 	EXP 	text_2: autoDraw = True
+155.7050 	DATA 	Keypress: down
+156.1332 	EXP 	text_2: autoDraw = False
+157.0192 	EXP 	New trial (rep=3, index=1): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'GREEN'), ('congruent', 1), ('corrans', 'down')])
+157.0359 	EXP 	task_display: autoDraw = False
+157.0359 	EXP 	text_2: autoDraw = False
+157.0359 	EXP 	fixationmain: autoDraw = False
+157.0359 	EXP 	task_display: autoDraw = False
+157.0359 	EXP 	text_2: color = 'GREEN (named)'
+157.0359 	EXP 	text_2: text = 'XANH DƯƠNG'
+157.0359 	EXP 	task_display: color = 'white (named)'
+157.0359 	EXP 	task_display: pos = array([-0.8,  0.8])
+157.0359 	EXP 	task_display: text = 'Task session'
+157.0359 	EXP 	task_display: font = 'Arial'
+157.0359 	EXP 	task_display: height = 0.1
+157.0359 	EXP 	fixationmain: autoDraw = True
+157.0359 	EXP 	task_display: autoDraw = True
+157.0359 	EXP 	task_display: text = 'Task session'
+157.8329 	EXP 	fixationmain: autoDraw = False
+157.8496 	EXP 	text_2: autoDraw = True
+158.5711 	DATA 	Keypress: right
+159.1328 	EXP 	text_2: autoDraw = False
+160.0188 	EXP 	New trial (rep=3, index=2): OrderedDict([('word', 'ĐỎ'), ('color', 'YELLOW'), ('congruent', 0), ('corrans', 'left')])
+160.0324 	EXP 	task_display: autoDraw = False
+160.0324 	EXP 	text_2: autoDraw = False
+160.0324 	EXP 	fixationmain: autoDraw = False
+160.0324 	EXP 	task_display: autoDraw = False
+160.0324 	EXP 	text_2: color = 'YELLOW (named)'
+160.0324 	EXP 	text_2: text = 'ĐỎ'
+160.0324 	EXP 	task_display: color = 'white (named)'
+160.0324 	EXP 	task_display: pos = array([-0.8,  0.8])
+160.0324 	EXP 	task_display: text = 'Task session'
+160.0324 	EXP 	task_display: font = 'Arial'
+160.0324 	EXP 	task_display: height = 0.1
+160.0324 	EXP 	fixationmain: autoDraw = True
+160.0324 	EXP 	task_display: autoDraw = True
+160.0324 	EXP 	task_display: text = 'Task session'
+160.8327 	EXP 	fixationmain: autoDraw = False
+160.8494 	EXP 	text_2: autoDraw = True
+162.1328 	EXP 	text_2: autoDraw = False
+162.1377 	DATA 	Keypress: up
+163.0181 	EXP 	New trial (rep=3, index=3): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+163.0320 	EXP 	task_display: autoDraw = False
+163.0320 	EXP 	text_2: autoDraw = False
+163.0320 	EXP 	fixationmain: autoDraw = False
+163.0320 	EXP 	task_display: autoDraw = False
+163.0320 	EXP 	text_2: color = 'RED (named)'
+163.0320 	EXP 	text_2: text = 'ĐỎ'
+163.0320 	EXP 	task_display: color = 'white (named)'
+163.0320 	EXP 	task_display: pos = array([-0.8,  0.8])
+163.0320 	EXP 	task_display: text = 'Task session'
+163.0320 	EXP 	task_display: font = 'Arial'
+163.0320 	EXP 	task_display: height = 0.1
+163.0320 	EXP 	fixationmain: autoDraw = True
+163.0320 	EXP 	task_display: autoDraw = True
+163.0320 	EXP 	task_display: text = 'Task session'
+163.8319 	EXP 	fixationmain: autoDraw = False
+163.8487 	EXP 	text_2: autoDraw = True
+164.3366 	DATA 	Keypress: left
+165.1315 	EXP 	text_2: autoDraw = False
+166.0181 	EXP 	New trial (rep=3, index=4): OrderedDict([('word', 'VÀNG'), ('color', 'RED'), ('congruent', 0), ('corrans', 'up')])
+166.0317 	EXP 	task_display: autoDraw = False
+166.0317 	EXP 	text_2: autoDraw = False
+166.0317 	EXP 	fixationmain: autoDraw = False
+166.0317 	EXP 	task_display: autoDraw = False
+166.0317 	EXP 	text_2: color = 'RED (named)'
+166.0317 	EXP 	text_2: text = 'VÀNG'
+166.0317 	EXP 	task_display: color = 'white (named)'
+166.0317 	EXP 	task_display: pos = array([-0.8,  0.8])
+166.0317 	EXP 	task_display: text = 'Task session'
+166.0317 	EXP 	task_display: font = 'Arial'
+166.0317 	EXP 	task_display: height = 0.1
+166.0317 	EXP 	fixationmain: autoDraw = True
+166.0317 	EXP 	task_display: autoDraw = True
+166.0317 	EXP 	task_display: text = 'Task session'
+166.8313 	EXP 	fixationmain: autoDraw = False
+166.8481 	EXP 	text_2: autoDraw = True
+167.7521 	DATA 	Keypress: left
+168.1308 	EXP 	text_2: autoDraw = False
+169.0166 	EXP 	New trial (rep=4, index=0): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'GREEN'), ('congruent', 1), ('corrans', 'down')])
+169.0319 	EXP 	task_display: autoDraw = False
+169.0319 	EXP 	text_2: autoDraw = False
+169.0319 	EXP 	fixationmain: autoDraw = False
+169.0319 	EXP 	task_display: autoDraw = False
+169.0319 	EXP 	text_2: color = 'GREEN (named)'
+169.0319 	EXP 	text_2: text = 'XANH DƯƠNG'
+169.0319 	EXP 	task_display: color = 'white (named)'
+169.0319 	EXP 	task_display: pos = array([-0.8,  0.8])
+169.0319 	EXP 	task_display: text = 'Task session'
+169.0319 	EXP 	task_display: font = 'Arial'
+169.0319 	EXP 	task_display: height = 0.1
+169.0319 	EXP 	fixationmain: autoDraw = True
+169.0319 	EXP 	task_display: autoDraw = True
+169.0319 	EXP 	task_display: text = 'Task session'
+169.8307 	EXP 	fixationmain: autoDraw = False
+169.8481 	EXP 	text_2: autoDraw = True
+170.7350 	DATA 	Keypress: right
+171.1305 	EXP 	text_2: autoDraw = False
+172.0168 	EXP 	New trial (rep=4, index=1): OrderedDict([('word', 'ĐỎ'), ('color', 'YELLOW'), ('congruent', 0), ('corrans', 'left')])
+172.0304 	EXP 	task_display: autoDraw = False
+172.0304 	EXP 	text_2: autoDraw = False
+172.0304 	EXP 	fixationmain: autoDraw = False
+172.0304 	EXP 	task_display: autoDraw = False
+172.0304 	EXP 	text_2: color = 'YELLOW (named)'
+172.0304 	EXP 	text_2: text = 'ĐỎ'
+172.0304 	EXP 	task_display: color = 'white (named)'
+172.0304 	EXP 	task_display: pos = array([-0.8,  0.8])
+172.0304 	EXP 	task_display: text = 'Task session'
+172.0304 	EXP 	task_display: font = 'Arial'
+172.0304 	EXP 	task_display: height = 0.1
+172.0304 	EXP 	fixationmain: autoDraw = True
+172.0304 	EXP 	task_display: autoDraw = True
+172.0304 	EXP 	task_display: text = 'Task session'
+172.8302 	EXP 	fixationmain: autoDraw = False
+172.8472 	EXP 	text_2: autoDraw = True
+173.4015 	DATA 	Keypress: left
+173.6674 	DATA 	Keypress: up
+174.1298 	EXP 	text_2: autoDraw = False
+175.0161 	EXP 	New trial (rep=4, index=2): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+175.0294 	EXP 	task_display: autoDraw = False
+175.0294 	EXP 	text_2: autoDraw = False
+175.0294 	EXP 	fixationmain: autoDraw = False
+175.0294 	EXP 	task_display: autoDraw = False
+175.0294 	EXP 	text_2: color = 'RED (named)'
+175.0294 	EXP 	text_2: text = 'ĐỎ'
+175.0294 	EXP 	task_display: color = 'white (named)'
+175.0294 	EXP 	task_display: pos = array([-0.8,  0.8])
+175.0294 	EXP 	task_display: text = 'Task session'
+175.0294 	EXP 	task_display: font = 'Arial'
+175.0294 	EXP 	task_display: height = 0.1
+175.0294 	EXP 	fixationmain: autoDraw = True
+175.0294 	EXP 	task_display: autoDraw = True
+175.0294 	EXP 	task_display: text = 'Task session'
+175.8292 	EXP 	fixationmain: autoDraw = False
+175.8460 	EXP 	text_2: autoDraw = True
+176.3339 	DATA 	Keypress: left
+177.1289 	EXP 	text_2: autoDraw = False
+178.0158 	EXP 	New trial (rep=4, index=3): OrderedDict([('word', 'XANH LÁ'), ('color', 'BLUE'), ('congruent', 1), ('corrans', 'right')])
+178.0307 	EXP 	task_display: autoDraw = False
+178.0307 	EXP 	text_2: autoDraw = False
+178.0307 	EXP 	fixationmain: autoDraw = False
+178.0307 	EXP 	task_display: autoDraw = False
+178.0307 	EXP 	text_2: color = 'BLUE (named)'
+178.0307 	EXP 	text_2: text = 'XANH LÁ'
+178.0307 	EXP 	task_display: color = 'white (named)'
+178.0307 	EXP 	task_display: pos = array([-0.8,  0.8])
+178.0307 	EXP 	task_display: text = 'Task session'
+178.0307 	EXP 	task_display: font = 'Arial'
+178.0307 	EXP 	task_display: height = 0.1
+178.0307 	EXP 	fixationmain: autoDraw = True
+178.0307 	EXP 	task_display: autoDraw = True
+178.0307 	EXP 	task_display: text = 'Task session'
+178.8288 	EXP 	fixationmain: autoDraw = False
+178.8456 	EXP 	text_2: autoDraw = True
+179.6668 	DATA 	Keypress: down
+180.1287 	EXP 	text_2: autoDraw = False
+181.0141 	EXP 	New trial (rep=4, index=4): OrderedDict([('word', 'VÀNG'), ('color', 'RED'), ('congruent', 0), ('corrans', 'up')])
+181.0284 	EXP 	task_display: autoDraw = False
+181.0284 	EXP 	text_2: autoDraw = False
+181.0284 	EXP 	fixationmain: autoDraw = False
+181.0284 	EXP 	task_display: autoDraw = False
+181.0284 	EXP 	text_2: color = 'RED (named)'
+181.0284 	EXP 	text_2: text = 'VÀNG'
+181.0284 	EXP 	task_display: color = 'white (named)'
+181.0284 	EXP 	task_display: pos = array([-0.8,  0.8])
+181.0284 	EXP 	task_display: text = 'Task session'
+181.0284 	EXP 	task_display: font = 'Arial'
+181.0284 	EXP 	task_display: height = 0.1
+181.0284 	EXP 	fixationmain: autoDraw = True
+181.0284 	EXP 	task_display: autoDraw = True
+181.0284 	EXP 	task_display: text = 'Task session'
+181.8282 	EXP 	fixationmain: autoDraw = False
+181.8447 	EXP 	text_2: autoDraw = True
+182.5996 	DATA 	Keypress: left
+183.1281 	EXP 	text_2: autoDraw = False
+184.0140 	EXP 	New trial (rep=5, index=0): OrderedDict([('word', 'XANH LÁ'), ('color', 'BLUE'), ('congruent', 1), ('corrans', 'right')])
+184.0291 	EXP 	task_display: autoDraw = False
+184.0291 	EXP 	text_2: autoDraw = False
+184.0291 	EXP 	fixationmain: autoDraw = False
+184.0291 	EXP 	task_display: autoDraw = False
+184.0291 	EXP 	text_2: color = 'BLUE (named)'
+184.0291 	EXP 	text_2: text = 'XANH LÁ'
+184.0291 	EXP 	task_display: color = 'white (named)'
+184.0291 	EXP 	task_display: pos = array([-0.8,  0.8])
+184.0291 	EXP 	task_display: text = 'Task session'
+184.0291 	EXP 	task_display: font = 'Arial'
+184.0291 	EXP 	task_display: height = 0.1
+184.0291 	EXP 	fixationmain: autoDraw = True
+184.0291 	EXP 	task_display: autoDraw = True
+184.0291 	EXP 	task_display: text = 'Task session'
+184.8274 	EXP 	fixationmain: autoDraw = False
+184.8442 	EXP 	text_2: autoDraw = True
+185.8152 	DATA 	Keypress: down
+186.1274 	EXP 	text_2: autoDraw = False
+187.0136 	EXP 	New trial (rep=5, index=1): OrderedDict([('word', 'ĐỎ'), ('color', 'YELLOW'), ('congruent', 0), ('corrans', 'left')])
+187.0274 	EXP 	task_display: autoDraw = False
+187.0274 	EXP 	text_2: autoDraw = False
+187.0274 	EXP 	fixationmain: autoDraw = False
+187.0274 	EXP 	task_display: autoDraw = False
+187.0274 	EXP 	text_2: color = 'YELLOW (named)'
+187.0274 	EXP 	text_2: text = 'ĐỎ'
+187.0274 	EXP 	task_display: color = 'white (named)'
+187.0274 	EXP 	task_display: pos = array([-0.8,  0.8])
+187.0274 	EXP 	task_display: text = 'Task session'
+187.0274 	EXP 	task_display: font = 'Arial'
+187.0274 	EXP 	task_display: height = 0.1
+187.0274 	EXP 	fixationmain: autoDraw = True
+187.0274 	EXP 	task_display: autoDraw = True
+187.0274 	EXP 	task_display: text = 'Task session'
+187.8272 	EXP 	fixationmain: autoDraw = False
+187.8439 	EXP 	text_2: autoDraw = True
+188.5985 	DATA 	Keypress: up
+189.1268 	EXP 	text_2: autoDraw = False
+190.0130 	EXP 	New trial (rep=5, index=2): OrderedDict([('word', 'VÀNG'), ('color', 'RED'), ('congruent', 0), ('corrans', 'up')])
+190.0268 	EXP 	task_display: autoDraw = False
+190.0268 	EXP 	text_2: autoDraw = False
+190.0268 	EXP 	fixationmain: autoDraw = False
+190.0268 	EXP 	task_display: autoDraw = False
+190.0268 	EXP 	text_2: color = 'RED (named)'
+190.0268 	EXP 	text_2: text = 'VÀNG'
+190.0268 	EXP 	task_display: color = 'white (named)'
+190.0268 	EXP 	task_display: pos = array([-0.8,  0.8])
+190.0268 	EXP 	task_display: text = 'Task session'
+190.0268 	EXP 	task_display: font = 'Arial'
+190.0268 	EXP 	task_display: height = 0.1
+190.0268 	EXP 	fixationmain: autoDraw = True
+190.0268 	EXP 	task_display: autoDraw = True
+190.0268 	EXP 	task_display: text = 'Task session'
+190.8264 	EXP 	fixationmain: autoDraw = False
+190.8433 	EXP 	text_2: autoDraw = True
+191.8972 	DATA 	Keypress: left
+192.1260 	EXP 	text_2: autoDraw = False
+193.0129 	EXP 	New trial (rep=5, index=3): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+193.0261 	EXP 	task_display: autoDraw = False
+193.0261 	EXP 	text_2: autoDraw = False
+193.0261 	EXP 	fixationmain: autoDraw = False
+193.0261 	EXP 	task_display: autoDraw = False
+193.0261 	EXP 	text_2: color = 'RED (named)'
+193.0261 	EXP 	text_2: text = 'ĐỎ'
+193.0261 	EXP 	task_display: color = 'white (named)'
+193.0261 	EXP 	task_display: pos = array([-0.8,  0.8])
+193.0261 	EXP 	task_display: text = 'Task session'
+193.0261 	EXP 	task_display: font = 'Arial'
+193.0261 	EXP 	task_display: height = 0.1
+193.0261 	EXP 	fixationmain: autoDraw = True
+193.0261 	EXP 	task_display: autoDraw = True
+193.0261 	EXP 	task_display: text = 'Task session'
+193.8257 	EXP 	fixationmain: autoDraw = False
+193.8426 	EXP 	text_2: autoDraw = True
+194.3323 	DATA 	Keypress: left
+195.1255 	EXP 	text_2: autoDraw = False
+196.0116 	EXP 	New trial (rep=5, index=4): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'GREEN'), ('congruent', 1), ('corrans', 'down')])
+196.0282 	EXP 	task_display: autoDraw = False
+196.0282 	EXP 	text_2: autoDraw = False
+196.0282 	EXP 	fixationmain: autoDraw = False
+196.0282 	EXP 	task_display: autoDraw = False
+196.0282 	EXP 	text_2: color = 'GREEN (named)'
+196.0282 	EXP 	text_2: text = 'XANH DƯƠNG'
+196.0282 	EXP 	task_display: color = 'white (named)'
+196.0282 	EXP 	task_display: pos = array([-0.8,  0.8])
+196.0282 	EXP 	task_display: text = 'Task session'
+196.0282 	EXP 	task_display: font = 'Arial'
+196.0282 	EXP 	task_display: height = 0.1
+196.0282 	EXP 	fixationmain: autoDraw = True
+196.0282 	EXP 	task_display: autoDraw = True
+196.0282 	EXP 	task_display: text = 'Task session'
+196.8251 	EXP 	fixationmain: autoDraw = False
+196.8421 	EXP 	text_2: autoDraw = True
+197.7294 	DATA 	Keypress: right
+198.1249 	EXP 	text_2: autoDraw = False
+199.0248 	EXP 	task_display: autoDraw = False
+199.0248 	EXP 	text_2: autoDraw = False
+199.0248 	EXP 	fixationmain: autoDraw = False
+199.0248 	EXP 	task_display: autoDraw = False
+199.0248 	EXP 	rest_text: text = '+'
+199.0248 	EXP 	rest_display: color = 'white (named)'
+199.0248 	EXP 	rest_display: pos = array([-0.8,  0.8])
+199.0248 	EXP 	rest_display: text = 'Rest Session'
+199.0248 	EXP 	rest_display: font = 'Arial'
+199.0248 	EXP 	rest_display: height = 0.1
+199.0248 	EXP 	rest_text: autoDraw = True
+199.0248 	EXP 	rest_display: autoDraw = True
+199.0248 	EXP 	rest_display: text = 'Rest Session'
+220.1389 	WARNING 	Got keycode {} but that code isn't yet known
+220.1389 	WARNING 	Keypress was given unknown key code (176)
+220.6892 	WARNING 	Got keycode {} but that code isn't yet known
+220.6892 	WARNING 	Keypress was given unknown key code (176)
+220.8728 	WARNING 	Got keycode {} but that code isn't yet known
+220.8728 	WARNING 	Keypress was given unknown key code (176)
+222.7218 	WARNING 	Got keycode {} but that code isn't yet known
+222.7218 	WARNING 	Keypress was given unknown key code (176)
+229.0158 	EXP 	Imported Stroopmain-short-conventional-5eventx3.xlsx as conditions, 5 conditions, 4 params
+229.0161 	EXP 	Created sequence: random, trialTypes=5, nReps=6, seed=None
+229.0165 	EXP 	New trial (rep=0, index=0): OrderedDict([('word', 'VÀNG'), ('color', 'YELLOW'), ('congruent', 1), ('corrans', 'up')])
+229.0298 	EXP 	rest_text: autoDraw = False
+229.0298 	EXP 	rest_display: autoDraw = False
+229.0298 	EXP 	rest_text: autoDraw = False
+229.0298 	EXP 	rest_display: autoDraw = False
+229.0298 	EXP 	text_2: color = 'YELLOW (named)'
+229.0298 	EXP 	text_2: text = 'VÀNG'
+229.0298 	EXP 	task_display: color = 'white (named)'
+229.0298 	EXP 	task_display: pos = array([-0.8,  0.8])
+229.0298 	EXP 	task_display: text = 'Task session'
+229.0298 	EXP 	task_display: font = 'Arial'
+229.0298 	EXP 	task_display: height = 0.1
+229.0298 	EXP 	fixationmain: autoDraw = True
+229.0298 	EXP 	task_display: autoDraw = True
+229.0298 	EXP 	task_display: text = 'Task session'
+229.8354 	EXP 	text_2: autoDraw = True
+229.8354 	EXP 	fixationmain: autoDraw = False
+230.9235 	DATA 	Keypress: up
+231.1350 	EXP 	text_2: autoDraw = False
+232.0220 	EXP 	New trial (rep=0, index=1): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+232.0355 	EXP 	task_display: autoDraw = False
+232.0355 	EXP 	text_2: autoDraw = False
+232.0355 	EXP 	fixationmain: autoDraw = False
+232.0355 	EXP 	task_display: autoDraw = False
+232.0355 	EXP 	text_2: color = 'RED (named)'
+232.0355 	EXP 	text_2: text = 'ĐỎ'
+232.0355 	EXP 	task_display: color = 'white (named)'
+232.0355 	EXP 	task_display: pos = array([-0.8,  0.8])
+232.0355 	EXP 	task_display: text = 'Task session'
+232.0355 	EXP 	task_display: font = 'Arial'
+232.0355 	EXP 	task_display: height = 0.1
+232.0355 	EXP 	fixationmain: autoDraw = True
+232.0355 	EXP 	task_display: autoDraw = True
+232.0355 	EXP 	task_display: text = 'Task session'
+232.8349 	EXP 	fixationmain: autoDraw = False
+232.8515 	EXP 	text_2: autoDraw = True
+233.3729 	DATA 	Keypress: left
+234.1345 	EXP 	text_2: autoDraw = False
+234.2538 	WARNING 	Got keycode {} but that code isn't yet known
+234.2538 	WARNING 	Keypress was given unknown key code (174)
+235.0218 	EXP 	New trial (rep=0, index=2): OrderedDict([('word', 'XANH LÁ'), ('color', 'RED'), ('congruent', 0), ('corrans', 'right')])
+235.0367 	EXP 	task_display: autoDraw = False
+235.0367 	EXP 	text_2: autoDraw = False
+235.0367 	EXP 	fixationmain: autoDraw = False
+235.0367 	EXP 	task_display: autoDraw = False
+235.0367 	EXP 	text_2: color = 'RED (named)'
+235.0367 	EXP 	text_2: text = 'XANH LÁ'
+235.0367 	EXP 	task_display: color = 'white (named)'
+235.0367 	EXP 	task_display: pos = array([-0.8,  0.8])
+235.0367 	EXP 	task_display: text = 'Task session'
+235.0367 	EXP 	task_display: font = 'Arial'
+235.0367 	EXP 	task_display: height = 0.1
+235.0367 	EXP 	fixationmain: autoDraw = True
+235.0367 	EXP 	task_display: autoDraw = True
+235.0367 	EXP 	task_display: text = 'Task session'
+235.4697 	WARNING 	Got keycode {} but that code isn't yet known
+235.4697 	WARNING 	Keypress was given unknown key code (174)
+235.6699 	WARNING 	Got keycode {} but that code isn't yet known
+235.6700 	WARNING 	Keypress was given unknown key code (174)
+235.8343 	EXP 	fixationmain: autoDraw = False
+235.8507 	EXP 	text_2: autoDraw = True
+236.6392 	DATA 	Keypress: left
+237.1340 	EXP 	text_2: autoDraw = False
+238.0200 	EXP 	New trial (rep=0, index=3): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'BLUE'), ('congruent', 0), ('corrans', 'right')])
+238.0362 	EXP 	task_display: autoDraw = False
+238.0362 	EXP 	text_2: autoDraw = False
+238.0362 	EXP 	fixationmain: autoDraw = False
+238.0362 	EXP 	task_display: autoDraw = False
+238.0362 	EXP 	text_2: color = 'BLUE (named)'
+238.0362 	EXP 	text_2: text = 'XANH DƯƠNG'
+238.0362 	EXP 	task_display: color = 'white (named)'
+238.0362 	EXP 	task_display: pos = array([-0.8,  0.8])
+238.0362 	EXP 	task_display: text = 'Task session'
+238.0362 	EXP 	task_display: font = 'Arial'
+238.0362 	EXP 	task_display: height = 0.1
+238.0362 	EXP 	fixationmain: autoDraw = True
+238.0362 	EXP 	task_display: autoDraw = True
+238.0362 	EXP 	task_display: text = 'Task session'
+238.8342 	EXP 	fixationmain: autoDraw = False
+238.8509 	EXP 	text_2: autoDraw = True
+239.9040 	DATA 	Keypress: down
+240.1335 	EXP 	text_2: autoDraw = False
+241.0194 	EXP 	New trial (rep=0, index=4): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+241.0336 	EXP 	task_display: autoDraw = False
+241.0336 	EXP 	text_2: autoDraw = False
+241.0336 	EXP 	fixationmain: autoDraw = False
+241.0336 	EXP 	task_display: autoDraw = False
+241.0336 	EXP 	text_2: color = 'RED (named)'
+241.0336 	EXP 	text_2: text = 'ĐỎ'
+241.0336 	EXP 	task_display: color = 'white (named)'
+241.0336 	EXP 	task_display: pos = array([-0.8,  0.8])
+241.0336 	EXP 	task_display: text = 'Task session'
+241.0336 	EXP 	task_display: font = 'Arial'
+241.0336 	EXP 	task_display: height = 0.1
+241.0336 	EXP 	fixationmain: autoDraw = True
+241.0336 	EXP 	task_display: autoDraw = True
+241.0336 	EXP 	task_display: text = 'Task session'
+241.8332 	EXP 	fixationmain: autoDraw = False
+241.8496 	EXP 	text_2: autoDraw = True
+242.3043 	DATA 	Keypress: left
+243.1331 	EXP 	text_2: autoDraw = False
+244.0196 	EXP 	New trial (rep=1, index=0): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'BLUE'), ('congruent', 0), ('corrans', 'right')])
+244.0361 	EXP 	task_display: autoDraw = False
+244.0361 	EXP 	text_2: autoDraw = False
+244.0361 	EXP 	fixationmain: autoDraw = False
+244.0361 	EXP 	task_display: autoDraw = False
+244.0361 	EXP 	text_2: color = 'BLUE (named)'
+244.0361 	EXP 	text_2: text = 'XANH DƯƠNG'
+244.0361 	EXP 	task_display: color = 'white (named)'
+244.0361 	EXP 	task_display: pos = array([-0.8,  0.8])
+244.0361 	EXP 	task_display: text = 'Task session'
+244.0361 	EXP 	task_display: font = 'Arial'
+244.0361 	EXP 	task_display: height = 0.1
+244.0361 	EXP 	fixationmain: autoDraw = True
+244.0361 	EXP 	task_display: autoDraw = True
+244.0361 	EXP 	task_display: text = 'Task session'
+244.8328 	EXP 	fixationmain: autoDraw = False
+244.8494 	EXP 	text_2: autoDraw = True
+245.5699 	DATA 	Keypress: down
+246.1326 	EXP 	text_2: autoDraw = False
+247.0182 	EXP 	New trial (rep=1, index=1): OrderedDict([('word', 'VÀNG'), ('color', 'YELLOW'), ('congruent', 1), ('corrans', 'up')])
+247.0320 	EXP 	task_display: autoDraw = False
+247.0320 	EXP 	text_2: autoDraw = False
+247.0320 	EXP 	fixationmain: autoDraw = False
+247.0320 	EXP 	task_display: autoDraw = False
+247.0320 	EXP 	text_2: color = 'YELLOW (named)'
+247.0320 	EXP 	text_2: text = 'VÀNG'
+247.0320 	EXP 	task_display: color = 'white (named)'
+247.0320 	EXP 	task_display: pos = array([-0.8,  0.8])
+247.0320 	EXP 	task_display: text = 'Task session'
+247.0320 	EXP 	task_display: font = 'Arial'
+247.0320 	EXP 	task_display: height = 0.1
+247.0320 	EXP 	fixationmain: autoDraw = True
+247.0320 	EXP 	task_display: autoDraw = True
+247.0320 	EXP 	task_display: text = 'Task session'
+247.8322 	EXP 	fixationmain: autoDraw = False
+247.8488 	EXP 	text_2: autoDraw = True
+248.5528 	DATA 	Keypress: up
+249.1315 	EXP 	text_2: autoDraw = False
+250.0178 	EXP 	New trial (rep=1, index=2): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+250.0316 	EXP 	task_display: autoDraw = False
+250.0316 	EXP 	text_2: autoDraw = False
+250.0316 	EXP 	fixationmain: autoDraw = False
+250.0316 	EXP 	task_display: autoDraw = False
+250.0316 	EXP 	text_2: color = 'RED (named)'
+250.0316 	EXP 	text_2: text = 'ĐỎ'
+250.0316 	EXP 	task_display: color = 'white (named)'
+250.0316 	EXP 	task_display: pos = array([-0.8,  0.8])
+250.0316 	EXP 	task_display: text = 'Task session'
+250.0316 	EXP 	task_display: font = 'Arial'
+250.0316 	EXP 	task_display: height = 0.1
+250.0316 	EXP 	fixationmain: autoDraw = True
+250.0316 	EXP 	task_display: autoDraw = True
+250.0316 	EXP 	task_display: text = 'Task session'
+250.8311 	EXP 	fixationmain: autoDraw = False
+250.8478 	EXP 	text_2: autoDraw = True
+251.3360 	DATA 	Keypress: left
+252.1317 	EXP 	text_2: autoDraw = False
+253.0170 	EXP 	New trial (rep=1, index=3): OrderedDict([('word', 'XANH LÁ'), ('color', 'RED'), ('congruent', 0), ('corrans', 'right')])
+253.0326 	EXP 	task_display: autoDraw = False
+253.0326 	EXP 	text_2: autoDraw = False
+253.0326 	EXP 	fixationmain: autoDraw = False
+253.0326 	EXP 	task_display: autoDraw = False
+253.0326 	EXP 	text_2: color = 'RED (named)'
+253.0326 	EXP 	text_2: text = 'XANH LÁ'
+253.0326 	EXP 	task_display: color = 'white (named)'
+253.0326 	EXP 	task_display: pos = array([-0.8,  0.8])
+253.0326 	EXP 	task_display: text = 'Task session'
+253.0326 	EXP 	task_display: font = 'Arial'
+253.0326 	EXP 	task_display: height = 0.1
+253.0326 	EXP 	fixationmain: autoDraw = True
+253.0326 	EXP 	task_display: autoDraw = True
+253.0326 	EXP 	task_display: text = 'Task session'
+253.8308 	EXP 	fixationmain: autoDraw = False
+253.8479 	EXP 	text_2: autoDraw = True
+254.8183 	DATA 	Keypress: left
+255.1304 	EXP 	text_2: autoDraw = False
+256.0170 	EXP 	New trial (rep=1, index=4): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+256.0301 	EXP 	task_display: autoDraw = False
+256.0301 	EXP 	text_2: autoDraw = False
+256.0301 	EXP 	fixationmain: autoDraw = False
+256.0301 	EXP 	task_display: autoDraw = False
+256.0301 	EXP 	text_2: color = 'RED (named)'
+256.0301 	EXP 	text_2: text = 'ĐỎ'
+256.0301 	EXP 	task_display: color = 'white (named)'
+256.0301 	EXP 	task_display: pos = array([-0.8,  0.8])
+256.0301 	EXP 	task_display: text = 'Task session'
+256.0301 	EXP 	task_display: font = 'Arial'
+256.0301 	EXP 	task_display: height = 0.1
+256.0301 	EXP 	fixationmain: autoDraw = True
+256.0301 	EXP 	task_display: autoDraw = True
+256.0301 	EXP 	task_display: text = 'Task session'
+256.8304 	EXP 	fixationmain: autoDraw = False
+256.8472 	EXP 	text_2: autoDraw = True
+257.4180 	DATA 	Keypress: left
+258.1298 	EXP 	text_2: autoDraw = False
+259.0158 	EXP 	New trial (rep=2, index=0): OrderedDict([('word', 'XANH LÁ'), ('color', 'RED'), ('congruent', 0), ('corrans', 'right')])
+259.0304 	EXP 	task_display: autoDraw = False
+259.0304 	EXP 	text_2: autoDraw = False
+259.0304 	EXP 	fixationmain: autoDraw = False
+259.0304 	EXP 	task_display: autoDraw = False
+259.0304 	EXP 	text_2: color = 'RED (named)'
+259.0304 	EXP 	text_2: text = 'XANH LÁ'
+259.0304 	EXP 	task_display: color = 'white (named)'
+259.0304 	EXP 	task_display: pos = array([-0.8,  0.8])
+259.0304 	EXP 	task_display: text = 'Task session'
+259.0304 	EXP 	task_display: font = 'Arial'
+259.0304 	EXP 	task_display: height = 0.1
+259.0304 	EXP 	fixationmain: autoDraw = True
+259.0304 	EXP 	task_display: autoDraw = True
+259.0304 	EXP 	task_display: text = 'Task session'
+259.8295 	EXP 	fixationmain: autoDraw = False
+259.8463 	EXP 	text_2: autoDraw = True
+260.4171 	DATA 	Keypress: left
+261.1291 	EXP 	text_2: autoDraw = False
+262.0162 	EXP 	New trial (rep=2, index=1): OrderedDict([('word', 'VÀNG'), ('color', 'YELLOW'), ('congruent', 1), ('corrans', 'up')])
+262.0299 	EXP 	task_display: autoDraw = False
+262.0299 	EXP 	text_2: autoDraw = False
+262.0299 	EXP 	fixationmain: autoDraw = False
+262.0299 	EXP 	task_display: autoDraw = False
+262.0299 	EXP 	text_2: color = 'YELLOW (named)'
+262.0299 	EXP 	text_2: text = 'VÀNG'
+262.0299 	EXP 	task_display: color = 'white (named)'
+262.0299 	EXP 	task_display: pos = array([-0.8,  0.8])
+262.0299 	EXP 	task_display: text = 'Task session'
+262.0299 	EXP 	task_display: font = 'Arial'
+262.0299 	EXP 	task_display: height = 0.1
+262.0299 	EXP 	fixationmain: autoDraw = True
+262.0299 	EXP 	task_display: autoDraw = True
+262.0299 	EXP 	task_display: text = 'Task session'
+262.8289 	EXP 	fixationmain: autoDraw = False
+262.8458 	EXP 	text_2: autoDraw = True
+263.5179 	DATA 	Keypress: up
+264.1285 	EXP 	text_2: autoDraw = False
+265.0146 	EXP 	New trial (rep=2, index=2): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+265.0283 	EXP 	task_display: autoDraw = False
+265.0283 	EXP 	text_2: autoDraw = False
+265.0283 	EXP 	fixationmain: autoDraw = False
+265.0283 	EXP 	task_display: autoDraw = False
+265.0283 	EXP 	text_2: color = 'RED (named)'
+265.0283 	EXP 	text_2: text = 'ĐỎ'
+265.0283 	EXP 	task_display: color = 'white (named)'
+265.0283 	EXP 	task_display: pos = array([-0.8,  0.8])
+265.0283 	EXP 	task_display: text = 'Task session'
+265.0283 	EXP 	task_display: font = 'Arial'
+265.0283 	EXP 	task_display: height = 0.1
+265.0283 	EXP 	fixationmain: autoDraw = True
+265.0283 	EXP 	task_display: autoDraw = True
+265.0283 	EXP 	task_display: text = 'Task session'
+265.8284 	EXP 	fixationmain: autoDraw = False
+265.8446 	EXP 	text_2: autoDraw = True
+266.4159 	DATA 	Keypress: left
+267.1279 	EXP 	text_2: autoDraw = False
+268.0147 	EXP 	New trial (rep=2, index=3): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'BLUE'), ('congruent', 0), ('corrans', 'right')])
+268.0313 	EXP 	task_display: autoDraw = False
+268.0313 	EXP 	text_2: autoDraw = False
+268.0313 	EXP 	fixationmain: autoDraw = False
+268.0313 	EXP 	task_display: autoDraw = False
+268.0313 	EXP 	text_2: color = 'BLUE (named)'
+268.0313 	EXP 	text_2: text = 'XANH DƯƠNG'
+268.0313 	EXP 	task_display: color = 'white (named)'
+268.0313 	EXP 	task_display: pos = array([-0.8,  0.8])
+268.0313 	EXP 	task_display: text = 'Task session'
+268.0313 	EXP 	task_display: font = 'Arial'
+268.0313 	EXP 	task_display: height = 0.1
+268.0313 	EXP 	fixationmain: autoDraw = True
+268.0313 	EXP 	task_display: autoDraw = True
+268.0313 	EXP 	task_display: text = 'Task session'
+268.8276 	EXP 	fixationmain: autoDraw = False
+268.8441 	EXP 	text_2: autoDraw = True
+269.5665 	DATA 	Keypress: down
+270.1274 	EXP 	text_2: autoDraw = False
+271.0139 	EXP 	New trial (rep=2, index=4): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+271.0273 	EXP 	task_display: autoDraw = False
+271.0273 	EXP 	text_2: autoDraw = False
+271.0273 	EXP 	fixationmain: autoDraw = False
+271.0273 	EXP 	task_display: autoDraw = False
+271.0273 	EXP 	text_2: color = 'RED (named)'
+271.0273 	EXP 	text_2: text = 'ĐỎ'
+271.0273 	EXP 	task_display: color = 'white (named)'
+271.0273 	EXP 	task_display: pos = array([-0.8,  0.8])
+271.0273 	EXP 	task_display: text = 'Task session'
+271.0273 	EXP 	task_display: font = 'Arial'
+271.0273 	EXP 	task_display: height = 0.1
+271.0273 	EXP 	fixationmain: autoDraw = True
+271.0273 	EXP 	task_display: autoDraw = True
+271.0273 	EXP 	task_display: text = 'Task session'
+271.8274 	EXP 	fixationmain: autoDraw = False
+271.8436 	EXP 	text_2: autoDraw = True
+272.3986 	DATA 	Keypress: left
+273.1268 	EXP 	text_2: autoDraw = False
+274.0128 	EXP 	New trial (rep=3, index=0): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+274.0270 	EXP 	task_display: autoDraw = False
+274.0270 	EXP 	text_2: autoDraw = False
+274.0270 	EXP 	fixationmain: autoDraw = False
+274.0270 	EXP 	task_display: autoDraw = False
+274.0270 	EXP 	text_2: color = 'RED (named)'
+274.0270 	EXP 	text_2: text = 'ĐỎ'
+274.0270 	EXP 	task_display: color = 'white (named)'
+274.0270 	EXP 	task_display: pos = array([-0.8,  0.8])
+274.0270 	EXP 	task_display: text = 'Task session'
+274.0270 	EXP 	task_display: font = 'Arial'
+274.0270 	EXP 	task_display: height = 0.1
+274.0270 	EXP 	fixationmain: autoDraw = True
+274.0270 	EXP 	task_display: autoDraw = True
+274.0270 	EXP 	task_display: text = 'Task session'
+274.8265 	EXP 	fixationmain: autoDraw = False
+274.8434 	EXP 	text_2: autoDraw = True
+275.2979 	DATA 	Keypress: left
+276.1260 	EXP 	text_2: autoDraw = False
+277.0120 	EXP 	New trial (rep=3, index=1): OrderedDict([('word', 'VÀNG'), ('color', 'YELLOW'), ('congruent', 1), ('corrans', 'up')])
+277.0267 	EXP 	task_display: autoDraw = False
+277.0267 	EXP 	text_2: autoDraw = False
+277.0267 	EXP 	fixationmain: autoDraw = False
+277.0267 	EXP 	task_display: autoDraw = False
+277.0267 	EXP 	text_2: color = 'YELLOW (named)'
+277.0267 	EXP 	text_2: text = 'VÀNG'
+277.0267 	EXP 	task_display: color = 'white (named)'
+277.0267 	EXP 	task_display: pos = array([-0.8,  0.8])
+277.0267 	EXP 	task_display: text = 'Task session'
+277.0267 	EXP 	task_display: font = 'Arial'
+277.0267 	EXP 	task_display: height = 0.1
+277.0267 	EXP 	fixationmain: autoDraw = True
+277.0267 	EXP 	task_display: autoDraw = True
+277.0267 	EXP 	task_display: text = 'Task session'
+277.8262 	EXP 	fixationmain: autoDraw = False
+277.8429 	EXP 	text_2: autoDraw = True
+278.3801 	DATA 	Keypress: up
+279.1258 	EXP 	text_2: autoDraw = False
+280.0113 	EXP 	New trial (rep=3, index=2): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'BLUE'), ('congruent', 0), ('corrans', 'right')])
+280.0271 	EXP 	task_display: autoDraw = False
+280.0271 	EXP 	text_2: autoDraw = False
+280.0271 	EXP 	fixationmain: autoDraw = False
+280.0271 	EXP 	task_display: autoDraw = False
+280.0271 	EXP 	text_2: color = 'BLUE (named)'
+280.0271 	EXP 	text_2: text = 'XANH DƯƠNG'
+280.0271 	EXP 	task_display: color = 'white (named)'
+280.0271 	EXP 	task_display: pos = array([-0.8,  0.8])
+280.0271 	EXP 	task_display: text = 'Task session'
+280.0271 	EXP 	task_display: font = 'Arial'
+280.0271 	EXP 	task_display: height = 0.1
+280.0271 	EXP 	fixationmain: autoDraw = True
+280.0271 	EXP 	task_display: autoDraw = True
+280.0271 	EXP 	task_display: text = 'Task session'
+280.8252 	EXP 	fixationmain: autoDraw = False
+280.8419 	EXP 	text_2: autoDraw = True
+281.6795 	DATA 	Keypress: down
+282.1249 	EXP 	text_2: autoDraw = False
+283.0112 	EXP 	New trial (rep=3, index=3): OrderedDict([('word', 'XANH LÁ'), ('color', 'RED'), ('congruent', 0), ('corrans', 'right')])
+283.0259 	EXP 	task_display: autoDraw = False
+283.0259 	EXP 	text_2: autoDraw = False
+283.0259 	EXP 	fixationmain: autoDraw = False
+283.0259 	EXP 	task_display: autoDraw = False
+283.0259 	EXP 	text_2: color = 'RED (named)'
+283.0259 	EXP 	text_2: text = 'XANH LÁ'
+283.0259 	EXP 	task_display: color = 'white (named)'
+283.0259 	EXP 	task_display: pos = array([-0.8,  0.8])
+283.0259 	EXP 	task_display: text = 'Task session'
+283.0259 	EXP 	task_display: font = 'Arial'
+283.0259 	EXP 	task_display: height = 0.1
+283.0259 	EXP 	fixationmain: autoDraw = True
+283.0259 	EXP 	task_display: autoDraw = True
+283.0259 	EXP 	task_display: text = 'Task session'
+283.8246 	EXP 	fixationmain: autoDraw = False
+283.8412 	EXP 	text_2: autoDraw = True
+284.3291 	DATA 	Keypress: left
+285.1243 	EXP 	text_2: autoDraw = False
+286.0105 	EXP 	New trial (rep=3, index=4): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+286.0242 	EXP 	task_display: autoDraw = False
+286.0242 	EXP 	text_2: autoDraw = False
+286.0242 	EXP 	fixationmain: autoDraw = False
+286.0242 	EXP 	task_display: autoDraw = False
+286.0242 	EXP 	text_2: color = 'RED (named)'
+286.0242 	EXP 	text_2: text = 'ĐỎ'
+286.0242 	EXP 	task_display: color = 'white (named)'
+286.0242 	EXP 	task_display: pos = array([-0.8,  0.8])
+286.0242 	EXP 	task_display: text = 'Task session'
+286.0242 	EXP 	task_display: font = 'Arial'
+286.0242 	EXP 	task_display: height = 0.1
+286.0242 	EXP 	fixationmain: autoDraw = True
+286.0242 	EXP 	task_display: autoDraw = True
+286.0242 	EXP 	task_display: text = 'Task session'
+286.8240 	EXP 	fixationmain: autoDraw = False
+286.8409 	EXP 	text_2: autoDraw = True
+287.3291 	DATA 	Keypress: left
+288.1239 	EXP 	text_2: autoDraw = False
+289.0103 	EXP 	New trial (rep=4, index=0): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+289.0235 	EXP 	task_display: autoDraw = False
+289.0235 	EXP 	text_2: autoDraw = False
+289.0235 	EXP 	fixationmain: autoDraw = False
+289.0235 	EXP 	task_display: autoDraw = False
+289.0235 	EXP 	text_2: color = 'RED (named)'
+289.0235 	EXP 	text_2: text = 'ĐỎ'
+289.0235 	EXP 	task_display: color = 'white (named)'
+289.0235 	EXP 	task_display: pos = array([-0.8,  0.8])
+289.0235 	EXP 	task_display: text = 'Task session'
+289.0235 	EXP 	task_display: font = 'Arial'
+289.0235 	EXP 	task_display: height = 0.1
+289.0235 	EXP 	fixationmain: autoDraw = True
+289.0235 	EXP 	task_display: autoDraw = True
+289.0235 	EXP 	task_display: text = 'Task session'
+289.8235 	EXP 	fixationmain: autoDraw = False
+289.8400 	EXP 	text_2: autoDraw = True
+290.2618 	DATA 	Keypress: left
+291.1233 	EXP 	text_2: autoDraw = False
+292.0097 	EXP 	New trial (rep=4, index=1): OrderedDict([('word', 'VÀNG'), ('color', 'YELLOW'), ('congruent', 1), ('corrans', 'up')])
+292.0234 	EXP 	task_display: autoDraw = False
+292.0234 	EXP 	text_2: autoDraw = False
+292.0234 	EXP 	fixationmain: autoDraw = False
+292.0234 	EXP 	task_display: autoDraw = False
+292.0234 	EXP 	text_2: color = 'YELLOW (named)'
+292.0234 	EXP 	text_2: text = 'VÀNG'
+292.0234 	EXP 	task_display: color = 'white (named)'
+292.0234 	EXP 	task_display: pos = array([-0.8,  0.8])
+292.0234 	EXP 	task_display: text = 'Task session'
+292.0234 	EXP 	task_display: font = 'Arial'
+292.0234 	EXP 	task_display: height = 0.1
+292.0234 	EXP 	fixationmain: autoDraw = True
+292.0234 	EXP 	task_display: autoDraw = True
+292.0234 	EXP 	task_display: text = 'Task session'
+292.8234 	EXP 	fixationmain: autoDraw = False
+292.8397 	EXP 	text_2: autoDraw = True
+293.3280 	DATA 	Keypress: up
+294.1229 	EXP 	text_2: autoDraw = False
+295.0082 	EXP 	New trial (rep=4, index=2): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'BLUE'), ('congruent', 0), ('corrans', 'right')])
+295.0247 	EXP 	task_display: autoDraw = False
+295.0247 	EXP 	text_2: autoDraw = False
+295.0247 	EXP 	fixationmain: autoDraw = False
+295.0247 	EXP 	task_display: autoDraw = False
+295.0247 	EXP 	text_2: color = 'BLUE (named)'
+295.0247 	EXP 	text_2: text = 'XANH DƯƠNG'
+295.0247 	EXP 	task_display: color = 'white (named)'
+295.0247 	EXP 	task_display: pos = array([-0.8,  0.8])
+295.0247 	EXP 	task_display: text = 'Task session'
+295.0247 	EXP 	task_display: font = 'Arial'
+295.0247 	EXP 	task_display: height = 0.1
+295.0247 	EXP 	fixationmain: autoDraw = True
+295.0247 	EXP 	task_display: autoDraw = True
+295.0247 	EXP 	task_display: text = 'Task session'
+295.8227 	EXP 	fixationmain: autoDraw = False
+295.8388 	EXP 	text_2: autoDraw = True
+296.5764 	DATA 	Keypress: down
+297.1221 	EXP 	text_2: autoDraw = False
+298.0083 	EXP 	New trial (rep=4, index=3): OrderedDict([('word', 'XANH LÁ'), ('color', 'RED'), ('congruent', 0), ('corrans', 'right')])
+298.0226 	EXP 	task_display: autoDraw = False
+298.0226 	EXP 	text_2: autoDraw = False
+298.0226 	EXP 	fixationmain: autoDraw = False
+298.0226 	EXP 	task_display: autoDraw = False
+298.0226 	EXP 	text_2: color = 'RED (named)'
+298.0226 	EXP 	text_2: text = 'XANH LÁ'
+298.0226 	EXP 	task_display: color = 'white (named)'
+298.0226 	EXP 	task_display: pos = array([-0.8,  0.8])
+298.0226 	EXP 	task_display: text = 'Task session'
+298.0226 	EXP 	task_display: font = 'Arial'
+298.0226 	EXP 	task_display: height = 0.1
+298.0226 	EXP 	fixationmain: autoDraw = True
+298.0226 	EXP 	task_display: autoDraw = True
+298.0226 	EXP 	task_display: text = 'Task session'
+298.8223 	EXP 	fixationmain: autoDraw = False
+298.8384 	EXP 	text_2: autoDraw = True
+299.3277 	DATA 	Keypress: left
+300.1216 	EXP 	text_2: autoDraw = False
+301.0077 	EXP 	New trial (rep=4, index=4): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+301.0214 	EXP 	task_display: autoDraw = False
+301.0214 	EXP 	text_2: autoDraw = False
+301.0214 	EXP 	fixationmain: autoDraw = False
+301.0214 	EXP 	task_display: autoDraw = False
+301.0214 	EXP 	text_2: color = 'RED (named)'
+301.0214 	EXP 	text_2: text = 'ĐỎ'
+301.0214 	EXP 	task_display: color = 'white (named)'
+301.0214 	EXP 	task_display: pos = array([-0.8,  0.8])
+301.0214 	EXP 	task_display: text = 'Task session'
+301.0214 	EXP 	task_display: font = 'Arial'
+301.0214 	EXP 	task_display: height = 0.1
+301.0214 	EXP 	fixationmain: autoDraw = True
+301.0214 	EXP 	task_display: autoDraw = True
+301.0214 	EXP 	task_display: text = 'Task session'
+301.8216 	EXP 	fixationmain: autoDraw = False
+301.8375 	EXP 	text_2: autoDraw = True
+302.2926 	DATA 	Keypress: left
+303.1211 	EXP 	text_2: autoDraw = False
+304.0077 	EXP 	New trial (rep=5, index=0): OrderedDict([('word', 'XANH DƯƠNG'), ('color', 'BLUE'), ('congruent', 0), ('corrans', 'right')])
+304.0238 	EXP 	task_display: autoDraw = False
+304.0238 	EXP 	text_2: autoDraw = False
+304.0238 	EXP 	fixationmain: autoDraw = False
+304.0238 	EXP 	task_display: autoDraw = False
+304.0238 	EXP 	text_2: color = 'BLUE (named)'
+304.0238 	EXP 	text_2: text = 'XANH DƯƠNG'
+304.0238 	EXP 	task_display: color = 'white (named)'
+304.0238 	EXP 	task_display: pos = array([-0.8,  0.8])
+304.0238 	EXP 	task_display: text = 'Task session'
+304.0238 	EXP 	task_display: font = 'Arial'
+304.0238 	EXP 	task_display: height = 0.1
+304.0238 	EXP 	fixationmain: autoDraw = True
+304.0238 	EXP 	task_display: autoDraw = True
+304.0238 	EXP 	task_display: text = 'Task session'
+304.8210 	EXP 	fixationmain: autoDraw = False
+304.8373 	EXP 	text_2: autoDraw = True
+305.4764 	DATA 	Keypress: down
+306.1204 	EXP 	text_2: autoDraw = False
+307.0074 	EXP 	New trial (rep=5, index=1): OrderedDict([('word', 'VÀNG'), ('color', 'YELLOW'), ('congruent', 1), ('corrans', 'up')])
+307.0202 	EXP 	task_display: autoDraw = False
+307.0202 	EXP 	text_2: autoDraw = False
+307.0202 	EXP 	fixationmain: autoDraw = False
+307.0202 	EXP 	task_display: autoDraw = False
+307.0202 	EXP 	text_2: color = 'YELLOW (named)'
+307.0202 	EXP 	text_2: text = 'VÀNG'
+307.0202 	EXP 	task_display: color = 'white (named)'
+307.0202 	EXP 	task_display: pos = array([-0.8,  0.8])
+307.0202 	EXP 	task_display: text = 'Task session'
+307.0202 	EXP 	task_display: font = 'Arial'
+307.0202 	EXP 	task_display: height = 0.1
+307.0202 	EXP 	fixationmain: autoDraw = True
+307.0202 	EXP 	task_display: autoDraw = True
+307.0202 	EXP 	task_display: text = 'Task session'
+307.8202 	EXP 	fixationmain: autoDraw = False
+307.8367 	EXP 	text_2: autoDraw = True
+308.6605 	DATA 	Keypress: up
+309.1199 	EXP 	text_2: autoDraw = False
+310.0060 	EXP 	New trial (rep=5, index=2): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+310.0201 	EXP 	task_display: autoDraw = False
+310.0201 	EXP 	text_2: autoDraw = False
+310.0201 	EXP 	fixationmain: autoDraw = False
+310.0201 	EXP 	task_display: autoDraw = False
+310.0201 	EXP 	text_2: color = 'RED (named)'
+310.0201 	EXP 	text_2: text = 'ĐỎ'
+310.0201 	EXP 	task_display: color = 'white (named)'
+310.0201 	EXP 	task_display: pos = array([-0.8,  0.8])
+310.0201 	EXP 	task_display: text = 'Task session'
+310.0201 	EXP 	task_display: font = 'Arial'
+310.0201 	EXP 	task_display: height = 0.1
+310.0201 	EXP 	fixationmain: autoDraw = True
+310.0201 	EXP 	task_display: autoDraw = True
+310.0201 	EXP 	task_display: text = 'Task session'
+310.8195 	EXP 	fixationmain: autoDraw = False
+310.8360 	EXP 	text_2: autoDraw = True
+311.2588 	DATA 	Keypress: left
+312.1190 	EXP 	text_2: autoDraw = False
+313.0063 	EXP 	New trial (rep=5, index=3): OrderedDict([('word', 'ĐỎ'), ('color', 'RED'), ('congruent', 1), ('corrans', 'left')])
+313.0191 	EXP 	task_display: autoDraw = False
+313.0191 	EXP 	text_2: autoDraw = False
+313.0191 	EXP 	fixationmain: autoDraw = False
+313.0191 	EXP 	task_display: autoDraw = False
+313.0191 	EXP 	text_2: color = 'RED (named)'
+313.0191 	EXP 	text_2: text = 'ĐỎ'
+313.0191 	EXP 	task_display: color = 'white (named)'
+313.0191 	EXP 	task_display: pos = array([-0.8,  0.8])
+313.0191 	EXP 	task_display: text = 'Task session'
+313.0191 	EXP 	task_display: font = 'Arial'
+313.0191 	EXP 	task_display: height = 0.1
+313.0191 	EXP 	fixationmain: autoDraw = True
+313.0191 	EXP 	task_display: autoDraw = True
+313.0191 	EXP 	task_display: text = 'Task session'
+313.8188 	EXP 	fixationmain: autoDraw = False
+313.8353 	EXP 	text_2: autoDraw = True
+314.2902 	DATA 	Keypress: left
+315.1188 	EXP 	text_2: autoDraw = False
+316.0042 	EXP 	New trial (rep=5, index=4): OrderedDict([('word', 'XANH LÁ'), ('color', 'RED'), ('congruent', 0), ('corrans', 'right')])
+316.0197 	EXP 	task_display: autoDraw = False
+316.0197 	EXP 	text_2: autoDraw = False
+316.0197 	EXP 	fixationmain: autoDraw = False
+316.0197 	EXP 	task_display: autoDraw = False
+316.0197 	EXP 	text_2: color = 'RED (named)'
+316.0197 	EXP 	text_2: text = 'XANH LÁ'
+316.0197 	EXP 	task_display: color = 'white (named)'
+316.0197 	EXP 	task_display: pos = array([-0.8,  0.8])
+316.0197 	EXP 	task_display: text = 'Task session'
+316.0197 	EXP 	task_display: font = 'Arial'
+316.0197 	EXP 	task_display: height = 0.1
+316.0197 	EXP 	fixationmain: autoDraw = True
+316.0197 	EXP 	task_display: autoDraw = True
+316.0197 	EXP 	task_display: text = 'Task session'
+316.8184 	EXP 	fixationmain: autoDraw = False
+316.8348 	EXP 	text_2: autoDraw = True
+317.3903 	DATA 	Keypress: left
+318.1180 	EXP 	text_2: autoDraw = False
+319.0183 	EXP 	task_display: autoDraw = False
+319.0183 	EXP 	text_2: autoDraw = False
+319.0183 	EXP 	fixationmain: autoDraw = False
+319.0183 	EXP 	task_display: autoDraw = False
+319.0183 	EXP 	rest_text: text = '+'
+319.0183 	EXP 	rest_display: color = 'white (named)'
+319.0183 	EXP 	rest_display: pos = array([-0.8,  0.8])
+319.0183 	EXP 	rest_display: text = 'Rest Session'
+319.0183 	EXP 	rest_display: font = 'Arial'
+319.0183 	EXP 	rest_display: height = 0.1
+319.0183 	EXP 	rest_text: autoDraw = True
+319.0183 	EXP 	rest_display: autoDraw = True
+319.0183 	EXP 	rest_display: text = 'Rest Session'
+349.0119 	EXP 	rest_text: autoDraw = False
+349.0119 	EXP 	rest_display: autoDraw = False
+349.0119 	EXP 	rest_text: autoDraw = False
+349.0119 	EXP 	rest_display: autoDraw = False
+349.0973 	EXP 	window1: mouseVisible = True
