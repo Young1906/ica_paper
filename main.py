@@ -26,8 +26,8 @@ def _get_ica_map(ica, components=None):
 
 if __name__ == "__main__":
 
-    path_edf = config["PATH"]["path_edf"]
-    path_stage = config["PATH"]["path_stage"]
+    path_edf="./edf/1489/1489_alice/edf/A0001489.EDF"
+    path_stage="./edf/1489/1489_alice/csv/STAGE.csv"
     
     eeg = EEG(path_edf=path_edf, path_stage=path_stage)
 
