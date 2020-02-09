@@ -1,6 +1,6 @@
 **/env
 **/edf/*.*
-**/edf/*
+**/edf
 **/__pycache__
 **/.ipynb_checkpoints
 **/data.json
