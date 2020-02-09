@@ -56,6 +56,11 @@ if __name__ == "__main__":
             # Apply baseline correction
             sample_raw_baseline = sample_raw.copy()
             sample_raw_baseline.apply_function(baseline_calc)
+
+            # sample_raw.copy().pick('Fp1').plot()
+            # sample_raw_baseline.copy().pick('Fp1').plot()
+
+            # break
             
             # Apply bandpass filter
             sample_raw_bandpass = sample_raw_baseline.copy()
@@ -67,7 +72,7 @@ if __name__ == "__main__":
             
             # Train
             ica = ICA(method="extended-infomax", random_state=1)
-            ica.fit(sample_raw_train)
+            ica.fit(sample_raw_corrected)
             
             # Plot ICA component
             ica.plot_sources(inst=sample_raw_train) 
@@ -80,12 +85,12 @@ if __name__ == "__main__":
             if list_of_eog:
 
                 ica.exclude = list_of_eog
-                raw_ = eeg.raw.copy()
-                # sample_raw_corrected = sample_.copy()
+                # raw_ = eeg.raw.copy()
+                # sample_raw_corrected = sample_raw_bandpass.copy()
 
                 ica.apply(sample_raw_corrected)
 
-                sample_raw_train.plot(title="RAW")
+                sample_raw.plot(title="RAW")
                 sample_raw_corrected.plot(title="RAW_CORRECTED")
 
                 to_save = input("Save this trunk? [y/n]: ")
