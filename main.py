@@ -6,6 +6,8 @@ from mne.preprocessing import ICA
 import mne
 from matplotlib import pyplot as plt
 import json
+import sys, os
+import pandas as pd
 
 # https://github.com/mne-tools/mne-python/issues/2404
 
@@ -26,8 +28,9 @@ def _get_ica_map(ica, components=None):
 
 if __name__ == "__main__":
 
-    path_edf="./edf/1489/1489_alice/edf/A0001489.edf"
-    path_stage="./edf/1489/1489_alice/csv/STAGE.csv"
+    # path_edf="./edf/1489/1489_alice/edf/A0001489.edf"
+    path_edf="./edf/1578/1578_alice/edf/A0001578.edf"
+    path_stage="./edf/1578/1578_alice/csv/STAGE.csv"
     
     eeg = EEG(path_edf=path_edf, path_stage=path_stage)
 
@@ -38,6 +41,9 @@ if __name__ == "__main__":
 
     N_SAMPLE = int(config["DEFAULT"]["N_SAMPLE_PER_SUBJECT"])
     counter = 0 
+
+    if not os.path.exists("csvs"):
+        os.mkdir("csvs")
 
     for task in eeg.tasks:
         if counter > N_SAMPLE:
@@ -78,9 +84,13 @@ if __name__ == "__main__":
             ica.plot_sources(inst=sample_raw_train) 
             ica.plot_components(inst=sample_raw_train)
             
-        
-            list_of_eog = input("List of components seperated by space: ")
-            list_of_eog = list(map(int, list_of_eog.split()))
+            while True:
+                try:
+                    list_of_eog = input("List of components seperated by space: ")
+                    list_of_eog = list(map(int, list_of_eog.split()))
+                    break
+                except ValueError:
+                    print("Try again..")
             
             if list_of_eog:
 
@@ -113,7 +123,19 @@ if __name__ == "__main__":
                             "map" : list(maps[:, idx2]),
                             "label" : "EOG" if idx2 in list_of_eog else "Non-EOG"
                         }
-                        
+                        # Save file to csv
+                        temp = pd.DataFrame(components[idx2,:].reshape(-1, len(components[idx2,: ])), columns = [f"comp_{i}" for i in range(len(components[idx2,:]))])
+                            
+                        temp['name'] = "{comp_name}_{idx}".format(comp_name=comp_name, idx=idx)
+                        temp['label'] = "EOG" if idx2 in list_of_eog else "Non-EOG"
+                        # print(temp)
+                        comp_map = list(maps[:, idx2])
+                        # print(comp_map)
+                        for i in range(len(comp_map)):
+                            temp[f"map_component_{i}"] = comp_map[i]
+                        temp.to_csv(f'./csvs/{name}_{idx}_{comp_name}.csv', index=False, header=True)
+                        # print(maps[:, idx2].shape)
+                        # sys.exit()
                         try:
                             _components.append(tmp)
                             counter+=1
