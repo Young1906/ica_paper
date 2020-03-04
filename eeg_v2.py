@@ -10,11 +10,13 @@ class EEG():
         self.baseline = None
         self.bandpass = None
         self.corrected = None
+        self.eog_channels = None
          
         # Raw data & meta data
         self.path_edf, self.path_stage = (path_edf, path_stage)
         raw = read_raw_edf(self.path_edf, preload=True, verbose=0)
-        import pdb; pdb.set_trace()
+        self.eog_channels = raw.copy().pick_channels(['EOG Left', 'EOG Right'])
+
         raw.pick_channels(['EEG Fp1-A2','EEG F7-A2','EEG F3-A2','EEG T5-A2', \
                            'EEG O1-A2','EEG Fp2-A1','EEG F4-A1','EEG F8-A1','EEG T6-A1','EEG O2-A1'])
         
@@ -28,6 +30,8 @@ class EEG():
         self.raw = raw.copy()
 
         self.meas_date, _ = self.raw.info['meas_date']
+        # print(self.meas_date)
+        # exit()
         self.ch_names = self.raw.info['ch_names']
         
         # Stage file: 
@@ -38,7 +42,7 @@ class EEG():
              end_date, end_time = stages[0].split(',')
         
             stages = stages[1:]
-
+            
         # Stages and stages indices
         self.stages = stages
         self.subject = subject
@@ -57,8 +61,3 @@ class EEG():
         
         self.DIFFTIME = self.start_timestamp - self.meas_date
 
-if __name__ == "__main__":
-    path_edf="./edf/1578_alice/edf/A0001578.edf"
-    path_stage="./edf/1578_alice/csv/STAGE.csv"
-    
-    eeg = EEG(path_edf=path_edf, path_stage=path_stage)
