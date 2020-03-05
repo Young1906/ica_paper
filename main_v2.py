@@ -88,7 +88,7 @@ if __name__ == "__main__":
             # eeg_min, eeg_max = np.min(_source_0), np.max(_source_0)
             # eeg_min, eeg_max = np.min(ica.get_sources(inst=sample_raw_train)[0,:]),np.max(ica.get_sources(inst=sample_raw_train)[0,:])
 
-            import pdb; pdb.set_trace()
+            # import pdb; pdb.set_trace()
             
             while True:
                 try:
