@@ -33,7 +33,8 @@ if __name__ == "__main__":
     path_stage="./edf/1578_alice/csv/STAGE.csv"
     
     eeg = EEG(path_edf=path_edf, path_stage=path_stage)
-
+    print(eeg.DIFFTIME)
+    print(eeg.meas_date)
     name = input("Subject no: ")
 
    
