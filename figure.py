@@ -5,9 +5,9 @@ import numpy as np
 plt.rcParams["figure.figsize"] = [15, 5]
 plt.rcParams["font.family"] = "Times New Roman"
 
-def plot_eeg(_sig, markers):
-    sig = _sig.get_data()
-    fs = _sig.fs
+def plot_eeg(_sig, fs, markers):
+    sig = _sig.get_data()*1e6
+    fs = fs
     ch_names = _sig.ch_names
     
     return _plot_eeg(sig, fs=fs, ch_names=ch_names, markers=markers)
@@ -32,7 +32,11 @@ def _plot_eeg(sig, **kwargs):
     _min, _max = np.min(sig), np.max(sig)
     
     # Create figure
-    fig = plt.figure()
+    dpi = kwargs.get("dpi")
+    if dpi:
+        fig = plt.figure(dpi=dpi)
+    else:
+        fig = plt.figure()
     
     # MARKER >>>
     
@@ -53,7 +57,7 @@ def _plot_eeg(sig, **kwargs):
         for i in markers:
             _t = i["t"]
             c = i["c"]
-            ax0.scatter(_t , 0, marker=11, s=500, color=c)
+            ax0.scatter(_t , 0, marker=11, s=100, color=c)
     
     ax0.axis("off")    
 
@@ -87,7 +91,7 @@ def _plot_eeg(sig, **kwargs):
             t,
             sig[i,:],
             color="black",
-            linewidth = 1,)
+            linewidth = .5,)
         
         # Display x-axis if i == n - 1 (last channel)
         ax1.axis(option="tight")
@@ -97,8 +101,7 @@ def _plot_eeg(sig, **kwargs):
                 fontdict =
                  {
                      'color':  'black',
-                     'weight': 'bold',
-                     'size': 18,
+                     'size': 12,
                  }
                 ) 
         
@@ -123,7 +126,7 @@ def _plot_eeg(sig, **kwargs):
              fontdict =
              {
                  'color':  'darkred',
-                 'size': 18,
+                 'size': 12,
              })
     
     # Vertical scale
@@ -135,15 +138,16 @@ def _plot_eeg(sig, **kwargs):
     ax2.axis("off")
     _s = np.round(_max - _min, 2)
     
-    ax2.text(.1, .5, f" {_s} mV",
+    ax2.text(.1, .5, f" {np.round((_s)*1e-3,2)} 10^-6V",
              horizontalalignment="left",
              verticalalignment="center",
              fontdict =
              {
                  'color':  'darkred',
-                 'size': 18,
+                 'size': 12,
              })
     # <<< SCALE
+    # plt.savefig("fig.png")
     return fig
 
 
