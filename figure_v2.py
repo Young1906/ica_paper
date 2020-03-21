@@ -207,11 +207,17 @@ def plot_sig_3(sig, **kwargs):
     fname = kwargs.get("fname")
     
     if fname:
-        fig.savefig(f"{fname}.png")
+        fig.savefig(fname=f"{fname}.png", pad_inches=0, dpi=dpi if dpi else None)
         plt.close(fig)
         pass
     else:
         return fig
+
+# https://matplotlib.org/3.2.0/api/_as_gen/matplotlib.pyplot.savefig.html
+# savefig(fname, dpi=None, facecolor='w', edgecolor='w',
+#     orientation='portrait', papertype=None, format=None,
+#     transparent=False, bbox_inches=None, pad_inches=0.1,
+#     frameon=None, metadata=None)
 
 if __name__ == "__main__":
     X = np.random.randn(10, 750)/1e6
