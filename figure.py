@@ -385,6 +385,196 @@ def plot_sig_2(sig, **kwargs):
     
     return fig
 
+
+def plot_sig_3(sig, **kwargs):
+    """
+    
+    ===
+    Example:
+        plot_sig_2(
+            X,
+            fs = 500,
+            dpi = 150,
+            scale = _scale1,
+            unit = "1e-06V",
+            ch_names = sample_raw_bandpass.ch_names,
+            eog_sig = sample_raw_eog.get_data(),
+            eog_ch_names = sample_raw_eog.ch_names,
+            markers = [.3,2.2,3.3,4.9]
+        );    
+    """
+    
+    # Shape
+    n, l = sig.shape
+    _min, _max = np.min(sig),np.max(sig)
+    
+    # Sampling frequency
+    fs = kwargs.get("fs")
+    assert fs, "Missing fs!!!"
+    
+    nsec= l/fs
+    taxis = np.linspace(0, nsec, l)
+    
+    # Scale
+    if kwargs.get("scale"):
+        _scale = kwargs.get("scale")
+    else:
+        _scale =_max - _min
+    
+    # DPI
+    dpi = kwargs.get("dpi")
+    if dpi:
+        fig = plt.figure(dpi=dpi)
+    else:
+        fig = plt.figure()
+    
+    n_ = n
+    
+    # EOG signal
+    eog_sig = kwargs.get("eog_sig")
+    
+    try:
+        n_eog, _ = eog_sig.shape
+    except Exception as e:
+        n_eog = 0
+        pass
+    
+    if n_eog:
+        eog_ch_names = kwargs.get("eog_ch_names")
+        assert eog_ch_names, "Missing EOG ch_names!!!"
+        n_ = n + n_eog
+    
+    gs = GridSpec(n_,11,figure=fig)
+
+    X = np.zeros([n,l])
+    
+    for i in range(n):
+        X[i,:] = sig[i,:] - i * _scale
+    
+    _min = np.mean(X[-1,:]) - _scale
+    _max = np.mean(X[0,:]) + _scale
+    
+    
+    # MARKER
+    # markers = kwargs.get("markers")
+    # [TODO]: move closer to signal
+    
+    ## Sig
+    # ax1 = fig.add_subplot(gs[0,1:0])
+    # ax1.set(xlim=(0, nsec))
+    # ax1.axis("off")
+    
+    # if markers:
+    #     for m in markers:
+    #         ax1.scatter(m, 0, marker=11, color="black")
+    
+    # SIGNAL EEG
+    
+    
+    ## Comp/Chan name
+    ch_names = kwargs.get("ch_names")
+    assert ch_names, "Missing ch_names!!!"
+    
+    ax0 = fig.add_subplot(gs[1:-2,0])
+    ax0.axis("off")
+    for i in range(n):
+        ax0.text(
+            1, (n-i)/(n+1),
+            ch_names[i],
+            verticalalignment="center",
+            horizontalalignment="right",
+        )
+    
+    
+    ## Sig
+    ax1 = fig.add_subplot(gs[1:-2,1:])
+    ax1.set(xlim=(0,nsec),ylim=(_min,_max))
+    ax1.axis("off")
+    
+    for i in range(n):
+        ax1.plot(taxis, X[i,:], color="black",linewidth=.25)
+    
+    ## Scale
+    ax2 = fig.add_subplot(gs[1:-2,-1])
+    ax2.axis("off")
+    ax2.set(xlim=(-1,0),ylim=(_min,_max))
+    
+    ### Temporal scale
+    ax2.plot([-10/nsec,0],[_min,_min], color="black")
+    ax2.text(
+        -5/nsec, _min*1.01,
+        "1 sec",
+        verticalalignment="top",
+        horizontalalignment="center"
+    )
+    
+    unit = kwargs.get("unit")
+    if unit:
+        ax2.plot([0,0],[_min, _min + _scale], color="black")
+        ax2.text(
+            0, _min + _scale/2,
+            f" {np.round(_scale * 1e6,2)} {unit}",
+            verticalalignment="center"
+        )
+        
+    # EOG SIG
+    
+    ## Comp / ch_name
+    ax0 = fig.add_subplot(gs[-2:,0])
+    ax0.axis("off")
+    for i in range(n_eog):
+        ax0.text(
+            1, (n_eog-i)/(n_eog+1),
+            eog_ch_names[i],
+            verticalalignment="center",
+            horizontalalignment="right",
+        )
+    ## Sig
+    
+    
+    X_eog = np.zeros([n_eog,l])
+    eog_scale = np.max(eog_sig) - np.min(eog_sig)
+    
+    for i in range(n_eog):
+        X_eog[i,:] = eog_sig[i,:] - i * eog_scale
+    
+    eog_min = np.mean(X_eog[-1,:]) - eog_scale
+    eog_max = np.mean(X_eog[0,:]) + eog_scale
+    
+    
+    ax1 = fig.add_subplot(gs[-2:,1:-1])
+    ax1.set(xlim=(0, nsec), ylim=(eog_min, eog_max))
+    ax1.axis("off")
+    
+    for i in range(n_eog):
+        ax1.plot(taxis, X_eog[i,:], color="black",linewidth=.25)
+    
+    
+    ## Scale
+    ax2 = fig.add_subplot(gs[-2:,-1])
+    ax2.axis("off")
+    ax2.set(xlim=(-1,0),ylim=(eog_min,eog_max))
+    
+    ax2.plot([-10/nsec,0],[eog_min,eog_min], color="black")
+    
+    ax2.text(
+        -5/nsec, eog_min*1.05,
+        "1 sec",
+        verticalalignment="top",
+        horizontalalignment="center"
+    )
+    
+    eog_unit = kwargs.get("eog_unit")
+    
+    ax2.plot([0,0],[eog_min, eog_min + eog_scale], color="black")
+    ax2.text(
+        0, eog_min + eog_scale/2,
+        f" {np.round(eog_scale * 1e6,2)} {eog_unit}",
+        verticalalignment="center"
+    )
+    
+    return fig
+
 if __name__ == "__main__":
     X = np.random.randn(10, 750)
     plt.rcParams["figure.figsize"] = [15,10]
