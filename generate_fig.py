@@ -113,7 +113,7 @@ if __name__ == "__main__":
                 eog_ch_names = sample_raw_eog.ch_names,
                 scale = _scale_c*1e3,
                 fname=f"{_path}fig2_raw"
-            );
+            )
             
 
             # Baseline + Bandpass
