@@ -2,63 +2,17 @@ from matplotlib import pyplot as plt
 from matplotlib.gridspec import GridSpec
 import numpy as np 
 import math
+from scipy.signal import welch
+plt.rcParams["font.family"] = "Times New Roman"
+plt.rcParams['axes.labelweight'] = 'normal'
 
-def plotly_psd(data, fs=128, unit='mV^2/Hz', max_f=60,  cols=1, height=1000, width=1024, title="PSD plots"):
-    """
-    Plot PSD of the data (interactive version)
-    Args:
-    - data (DataFrame): Raw data of shape (n_samples, n_channels)
-    - fs (int): sample rate
-    - unit (str): Unit of y-axis
-    - max_f (float): Maximum frequency to show in x-axis
-    - cols (int): Number of columns in plot
-    - height (int): Figure height
-    - width (int): Figure width
-    - title (str): Figure title
-    """
-    if cols == 1:
-        rows = data.shape[1]
-    else:
-        rows = math.ceil(data.shape[1] / cols)
-    name_list = ["Channel: " + str(c) for c in data.columns]
-    fig = make_subplots(rows=rows, cols=cols,\
-                       subplot_titles=name_list)
-    # Column & row indices
-    r_id, c_id = 1, 1
-    # Loop through all channels and plot
-    for i, ch in enumerate(data.columns):
-        x, y = welch(data.iloc[:,i], fs=fs, average='median', nperseg=fs*4)
-        x, y = (x[np.where(x<=max_f)], y.T[np.where(x<=max_f)])
-        if unit == 'V^2/Hz' or unit == 'mV^2/Hz':
-            x_, y_ = x, y
-        elif unit == 'V^2' or unit == 'mV^2':
-            x_, y_ = x, y*x
-        elif unit == 'V/Hz' or unit == 'mV/Hz': # V or mV
-            x_, y_ = x, np.sqrt(y*x)/x
-        else: # V or mV
-            x_, y_ = x, np.sqrt(y*x)
-        fig.add_trace(
-            go.Scatter(x=x_, y=y_),
-            row=r_id, col=c_id
-        )
-        fig.update_xaxes(title_text="Frequency (Hz)", row=r_id, col=c_id)
-        fig.update_yaxes(title_text=unit, row=r_id, col=c_id)
-        if cols == 1:
-            r_id += 1
-        else:
-            if (i + 1) % cols == 0:
-                r_id += 1
-                c_id = 1
-            else:
-                c_id += 1
 
-    fig.update_layout(height=height, width=width, title_text=title)
-    return fig
-
-def plot_psd_v2(X, fs, unit, dpi=None):
+def plot_psd_v2(X, fs, unit, scaling = 'density', dpi=None, log=False, fmax=100):
     n, l = X.shape 
-    nsec = l / fs 
-    t_axis = np.linspace(0, nsec, l)
+    # nsec = l / fs 
+    # t_axis = np.linspace(0, nsec, l)
+    x_tick = np.linspace(0, fmax, 11)
+    nperseg = 4 * fs
     # test_sig = np.sin(2*math.pi*10*fs*t_axis)
 
     if dpi:
@@ -66,18 +20,73 @@ def plot_psd_v2(X, fs, unit, dpi=None):
     else:
         fig = plt.figure()
 
-    gs = GridSpec(nrows = n, ncols = 1, figure = fig)
-    for i in range(n):
-        
-        ax = fig.add_subplot(gs[i, 0], sharex = None if i==0 else ax)
-
-        
-        ax.plot(t_axis, X[i,:])
+    gs = GridSpec(nrows = n, ncols = 11, figure = fig)
     
+    pxxs = []
+
+    for i in range(n):
+        # calculate psd
+        f, pxx = welch(X[i,:], fs=fs, nperseg=nperseg, scaling=scaling, average='median')
+
+        if log:
+            pxx = np.log(pxx)
+
+        pxxs.append(pxx)
+
+    d1, d2 = len(pxxs), len(pxx)
+    X_pss = np.zeros([d1, d2])
+    
+    for i in range(n):
+        X_pss[i,:] = np.asarray(pxxs[i])
+
+    min_, max_ = np.min(X_pss), np.max(X_pss)
+    mid_ = (min_ + max_)/2
+    for i in range(n):
+        ax = fig.add_subplot(gs[i, 1:])
+        ax.set(xlim=(0, fmax), ylim=(min_, max_))
+        
+        ax.plot(
+            f, X_pss[i,:],
+            linewidth = .5,
+            color='black'
+        )
+
+        ax.text(
+            fmax, mid_, #(max_ - min_)/2,
+            f" Comp {i}",
+            verticalalignment="center",
+            horizontalalignment="left"
+        )
+        
+        # ax.set_ylabel("Power(db)")
+
+        # Hide borders
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+        # ax.spines["bottom"].set_visible(False)
+        # ax.get_xaxis().set_ticks([])
+        ax.get_xaxis().set_ticks(x_tick)
+        ax.set_xticklabels([])
+    
+    # ax.spines["bottom"].set_visible(True)
+    ax.set_xticklabels(x_tick)
+    ax.set_xlabel("Frequency (Hz)")
+    # plt.ylabel('ylabel')
+    
+    # y label
+    ax0 = fig.add_subplot(gs[:, 0])
+    ax0.axis("off")
+    ax0.text(
+        0, .5,
+        f"{unit}",
+        verticalalignment="center",
+        horizontalalignment="right",
+        rotation=90
+    )
     return fig
 
 if __name__ == "__main__":
     X = np.random.randn(5, 1000)
-    plot_psd_v2(X, 500, unit=None, dpi=None)
+    plot_psd_v2(X, 500, log=True, unit="unit: Shared ylabel")
     plt.show()
     
