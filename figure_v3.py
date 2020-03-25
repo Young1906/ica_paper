@@ -70,6 +70,7 @@ def plot_sig(X, X_EOG, **kwargs):
             ch,
             verticalalignment="center",
             horizontalalignment="right",
+            fontdict={"fontsize":18}
         )
 
 
@@ -83,7 +84,8 @@ def plot_sig(X, X_EOG, **kwargs):
             t_axis, 
             X_[i,:],
             color="black",
-            linewidth=.25
+            linewidth=.25,
+            
         )
 
     ## Signal Scale:
@@ -94,10 +96,11 @@ def plot_sig(X, X_EOG, **kwargs):
     ## x-axis scale
     ax2.plot([nsec-1, nsec], [0, 0], color="black")
     ax2.text(
-            nsec, 0,
+            nsec, -.05 * comp_scale,
             "1 sec",
             verticalalignment="top",
-            horizontalalignment="right"
+            horizontalalignment="right",
+            fontdict={"fontsize":14}
         )
 
     ## y-axis scale
@@ -113,7 +116,8 @@ def plot_sig(X, X_EOG, **kwargs):
             nsec-1, comp_scale,
             f" {np.round(comp_scale, 1)} {unit}",
             verticalalignment="top",
-            horizontalalignment="left"
+            horizontalalignment="left",
+            fontdict={"fontsize":14}
         )
     
     # EOG >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -143,6 +147,7 @@ def plot_sig(X, X_EOG, **kwargs):
             ch,
             verticalalignment="center",
             horizontalalignment="right",
+            fontdict={"fontsize":18}
         )
 
     ## Comp/channel's Signal
@@ -166,10 +171,11 @@ def plot_sig(X, X_EOG, **kwargs):
     ## x-axis scale
     ax2.plot([nsec-1, nsec], [0, 0], color="black")
     ax2.text(
-            nsec, 0,
+            nsec, -.05 * eog_scale,
             "1 sec",
             verticalalignment="top",
-            horizontalalignment="right"
+            horizontalalignment="right",
+            fontdict={"fontsize":14}
         )
 
     ## y-axis scale
@@ -185,14 +191,15 @@ def plot_sig(X, X_EOG, **kwargs):
             nsec-1, eog_scale,
             f" {np.round(eog_scale, 1)} {eog_unit}",
             verticalalignment="top",
-            horizontalalignment="left"
+            horizontalalignment="left",
+            fontdict={"fontsize":14}
         )
 
 
     fname = kwargs.get("fname")
     if fname:
         fname = f"{fname}.png"
-        fig.save_fig(fname)
+        fig.savefig(fname)
         return fig
 
     return fig
