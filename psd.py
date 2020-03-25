@@ -57,8 +57,7 @@ def plot_psd_v2(X, fs, unit, scaling = 'density', dpi=None, log=False, fmax=100)
             verticalalignment="center",
             horizontalalignment="left"
         )
-        
-        # ax.set_ylabel("Power(db)")
+       
 
         # Hide borders
         ax.spines["top"].set_visible(False)
