@@ -3,7 +3,10 @@ from matplotlib.gridspec import GridSpec
 import numpy as np
 
 import matplotlib.pyplot as plt
+
+from config import fontsize_label, fontsize_axis, dpi, figsize, n_tick
 plt.rcParams["font.family"] = "Times New Roman"
+plt.rcParams['figure.figsize'] = figsize
 
 def plot_sig(X, X_EOG, **kwargs):
     """
@@ -70,7 +73,7 @@ def plot_sig(X, X_EOG, **kwargs):
             ch,
             verticalalignment="center",
             horizontalalignment="right",
-            fontdict={"fontsize":18}
+            fontdict={"fontsize":fontsize_label}
         )
 
 
@@ -100,7 +103,7 @@ def plot_sig(X, X_EOG, **kwargs):
             "1 sec",
             verticalalignment="top",
             horizontalalignment="right",
-            fontdict={"fontsize":14}
+            fontdict={"fontsize":fontsize_axis}
         )
 
     ## y-axis scale
@@ -117,7 +120,7 @@ def plot_sig(X, X_EOG, **kwargs):
             f" {np.round(comp_scale, 1)} {unit}",
             verticalalignment="top",
             horizontalalignment="left",
-            fontdict={"fontsize":14}
+            fontdict={"fontsize":fontsize_axis}
         )
     
     # EOG >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -147,7 +150,7 @@ def plot_sig(X, X_EOG, **kwargs):
             ch,
             verticalalignment="center",
             horizontalalignment="right",
-            fontdict={"fontsize":18}
+            fontdict={"fontsize":fontsize_label}
         )
 
     ## Comp/channel's Signal
@@ -175,7 +178,7 @@ def plot_sig(X, X_EOG, **kwargs):
             "1 sec",
             verticalalignment="top",
             horizontalalignment="right",
-            fontdict={"fontsize":14}
+            fontdict={"fontsize":fontsize_axis}
         )
 
     ## y-axis scale
@@ -192,14 +195,14 @@ def plot_sig(X, X_EOG, **kwargs):
             f" {np.round(eog_scale, 1)} {eog_unit}",
             verticalalignment="top",
             horizontalalignment="left",
-            fontdict={"fontsize":14}
+            fontdict={"fontsize":fontsize_axis}
         )
 
 
     fname = kwargs.get("fname")
     if fname:
         fname = f"{fname}.png"
-        fig.savefig(fname)
+        fig.savefig(fname, bbox_inches='tight', )
         return fig
 
     return fig
