@@ -2,7 +2,7 @@ import mne
 import pandas as pd
 from mne.io import read_raw_edf
 import numpy as np
-from scipy.signal import butter, lfilter
+from scipy.signal import butter, lfilter, filtfilt
 from scipy import signal 
 from scipy.signal import welch
 
@@ -41,7 +41,7 @@ def butter_bandpass(lowcut, highcut, fs, order=5):
 
 def butter_bandpass_filter(data, lowcut=.5, highcut=45., fs=500, order=5):
     b, a = butter_bandpass(lowcut, highcut, fs, order=order)
-    y = lfilter(b, a, data)
+    y = filtfilt(b, a, data)
     return y
 
 def calc_psd(s, _fs = FS, _avg='median', fmax = 100):
