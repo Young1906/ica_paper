@@ -4,7 +4,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-from config import fontsize_label, fontsize_axis, dpi, figsize, n_tick
+from config import fontsize_label, fontsize_axis, dpi, figsize, n_tick, fontweight_label
 plt.rcParams["font.family"] = "Times New Roman"
 plt.rcParams['figure.figsize'] = figsize
 
@@ -73,7 +73,8 @@ def plot_sig(X, X_EOG, **kwargs):
             ch,
             verticalalignment="center",
             horizontalalignment="right",
-            fontdict={"fontsize":fontsize_label}
+            fontdict={"fontsize":fontsize_label,
+            "weight":fontweight_label}
         )
 
 
@@ -90,38 +91,44 @@ def plot_sig(X, X_EOG, **kwargs):
             linewidth=.25,
             
         )
-
-    ## Signal Scale:
-    ax2 = fig.add_subplot(gs[n_comp:n_comp+1, 1:])
-    ax2.set(xlim = (0, nsec), ylim=(0, comp_scale))
-    ax2.axis("off")
-
-    ## x-axis scale
-    ax2.plot([nsec-1, nsec], [0, 0], color="black")
-    ax2.text(
-            nsec, -.05 * comp_scale,
-            "1 sec",
-            verticalalignment="top",
-            horizontalalignment="right",
-            fontdict={"fontsize":fontsize_axis}
-        )
-
-    ## y-axis scale
-    unit = kwargs.get("unit")
     
-    if unit:
-        ax2.plot([nsec-1, nsec-1], [0, comp_scale], \
-            color="black",
-            # linewidth = .5
-            )
-        
+    hide_scale = kwargs.get("hide_scale")
+    
+    if hide_scale:
+        pass 
+    
+    else:
+        ## Signal Scale:
+        ax2 = fig.add_subplot(gs[n_comp:n_comp+1, 1:])
+        ax2.set(xlim = (0, nsec), ylim=(0, comp_scale))
+        ax2.axis("off")
+
+        ## x-axis scale
+        ax2.plot([nsec-1, nsec], [0, 0], color="black")
         ax2.text(
-            nsec-1, comp_scale,
-            f" {np.round(comp_scale, 1)} {unit}",
-            verticalalignment="top",
-            horizontalalignment="left",
-            fontdict={"fontsize":fontsize_axis}
-        )
+                nsec, -.05 * comp_scale,
+                "1 sec",
+                verticalalignment="top",
+                horizontalalignment="right",
+                fontdict={"fontsize":fontsize_axis}
+            )
+
+        ## y-axis scale
+        unit = kwargs.get("unit")
+        
+        if unit:
+            ax2.plot([nsec-1, nsec-1], [0, comp_scale], \
+                color="black",
+                # linewidth = .5
+                )
+            
+            ax2.text(
+                nsec-1, comp_scale,
+                f" {np.round(comp_scale, 1)} {unit}",
+                verticalalignment="top",
+                horizontalalignment="left",
+                fontdict={"fontsize":fontsize_axis}
+            )
     
     # EOG >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     
@@ -171,32 +178,38 @@ def plot_sig(X, X_EOG, **kwargs):
     ax2.set(xlim = (0, nsec), ylim=(0, eog_scale))
     ax2.axis("off")
 
-    ## x-axis scale
-    ax2.plot([nsec-1, nsec], [0, 0], color="black")
-    ax2.text(
-            nsec, -.05 * eog_scale,
-            "1 sec",
-            verticalalignment="top",
-            horizontalalignment="right",
-            fontdict={"fontsize":fontsize_axis}
-        )
 
-    ## y-axis scale
-    eog_unit = kwargs.get("eog_unit")
+    if hide_scale:
+        pass 
     
-    if eog_unit:
-        ax2.plot([nsec-1, nsec-1], [0, eog_scale], \
-            color="black",
-            # linewidth = .5
-            )
-        
+    else:
+
+        ## x-axis scale
+        ax2.plot([nsec-1, nsec], [0, 0], color="black")
         ax2.text(
-            nsec-1, eog_scale,
-            f" {np.round(eog_scale, 1)} {eog_unit}",
-            verticalalignment="top",
-            horizontalalignment="left",
-            fontdict={"fontsize":fontsize_axis}
-        )
+                nsec, -.05 * eog_scale,
+                "1 sec",
+                verticalalignment="top",
+                horizontalalignment="right",
+                fontdict={"fontsize":fontsize_axis}
+            )
+
+        ## y-axis scale
+        eog_unit = kwargs.get("eog_unit")
+        
+        if eog_unit:
+            ax2.plot([nsec-1, nsec-1], [0, eog_scale], \
+                color="black",
+                # linewidth = .5
+                )
+            
+            ax2.text(
+                nsec-1, eog_scale,
+                f" {np.round(eog_scale, 1)} {eog_unit}",
+                verticalalignment="top",
+                horizontalalignment="left",
+                fontdict={"fontsize":fontsize_axis}
+            )
 
 
     fname = kwargs.get("fname")

@@ -110,29 +110,30 @@ if __name__ == "__main__":
 
             # Raw
             plot_sig(
-                X = sample_raw.get_data() * 1e3,
+                X = sample_raw.get_data() * 1e6, #https://github.com/mne-tools/mne-python/issues/1560 -> unit of measurement in EDF file is in voltage
                 fs = 500,
                 dpi = dpi,
                 unit = "μV",
                 ch_names = sample_raw.ch_names,
-                X_EOG = sample_raw_eog.get_data() * 1e3,
+                X_EOG = sample_raw_eog.get_data() * 1e6,
                 eog_ch_names = sample_raw_eog.ch_names,
-                scale = _scale_c*1e3,
-                fname=f"{_path}fig2_raw"
+                scale = _scale_c*1e6,
+                fname=f"{_path}fig2_raw",
+                hide_scale=True
             )
             
 
             # Baseline + Bandpass
             plot_sig(
-                X = sample_raw_bandpass.get_data() * 1e3,
+                X = sample_raw_bandpass.get_data() * 1e6,
                 fs = 500,
                 dpi = dpi,
                 unit = "μV",
                 ch_names = sample_raw.ch_names,
-                X_EOG = sample_raw_eog.get_data() * 1e3,
+                X_EOG = sample_raw_eog.get_data() * 1e6,
                 eog_ch_names = sample_raw_eog.ch_names,
                 markers = [.3,2.2,3.3,4.9],
-                scale = _scale_c*1e3,
+                scale = _scale_c*1e6,
                 fname=f"{_path}fig2_bandpass"
 
             )
@@ -155,14 +156,15 @@ if __name__ == "__main__":
             
             # Save fig
             plot_sig(
-                X = ica.get_sources(inst=sample_raw_train).get_data() * 1e3,
+                X = ica.get_sources(inst=sample_raw_train).get_data() * 1e6,
                 fs = 500,
                 dpi = dpi,
                 eog_unit = "μV",
                 ch_names = ica.get_sources(inst=sample_raw_train).ch_names,
-                X_EOG = sample_raw_eog.get_data() * 1e3,
+                X_EOG = sample_raw_eog.get_data() * 1e6,
                 eog_ch_names = sample_raw_eog.ch_names,
-                fname = f"{_path}figure3_good_ex"
+                fname = f"{_path}figure3_good_ex",
+                hide_scale=True
             )
             
             # ica.plot_components(inst=sample_raw_train)
@@ -180,17 +182,18 @@ if __name__ == "__main__":
 
     # fig4:
     plot_sig(
-        X = sample_raw_bandpass.get_data() * 1e3,
+        X = sample_raw_bandpass.get_data() * 1e6,
         fs = 500,
         dpi = dpi,
         unit = "μV",
         ch_names = sample_raw_corrected.ch_names,
-        X_EOG = sample_raw_eog.get_data() * 1e3,
+        X_EOG = sample_raw_eog.get_data() * 1e6,
         eog_ch_names = sample_raw_eog.ch_names,
         markers = [.3,2.2,3.3,4.9],
         eog_unit="μV",
-        scale=_scale_c*1e3,
-        fname = f"{_path}fig4_before"
+        scale=_scale_c*1e6,
+        fname = f"{_path}fig4_before",
+        hide_scale=True
     );
 
     plot_psd_v2(
@@ -205,16 +208,16 @@ if __name__ == "__main__":
     );
 
     plot_sig(
-        X = sample_raw_corrected.get_data() * 1e3,
+        X = sample_raw_corrected.get_data() * 1e6,
         fs = 500,
         dpi = dpi,
         unit = "μV",
         ch_names = sample_raw_corrected.ch_names,
-        X_EOG = sample_raw_eog.get_data() * 1e3,
+        X_EOG = sample_raw_eog.get_data() * 1e6,
         eog_ch_names = sample_raw_eog.ch_names,
         markers = [.3,2.2,3.3,4.9],
         eog_unit="μV",
-        scale=_scale_c*1e3,
+        scale=_scale_c*1e6,
         fname = f"{_path}fig4_after"
     );
 
@@ -246,12 +249,12 @@ if __name__ == "__main__":
             
             # Save fig
             plot_sig(
-                X = ica.get_sources(inst=sample_raw_train).get_data() * 1e3,
+                X = ica.get_sources(inst=sample_raw_train).get_data() * 1e6,
                 fs = 500,
                 dpi = dpi,
                 eog_unit = "μV",
                 ch_names = ica.get_sources(inst=sample_raw_train).ch_names,
-                X_EOG = sample_raw_eog.get_data() * 1e3,
+                X_EOG = sample_raw_eog.get_data() * 1e6,
                 eog_ch_names = sample_raw_eog.ch_names,
                 fname = f"{_path}figure3_bad_ex"
             );

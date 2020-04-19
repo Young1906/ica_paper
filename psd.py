@@ -47,18 +47,21 @@ def plot_psd_v2(X, fs, unit, ch_names,fname = None, scaling = 'density', dpi=Non
         ax.set(xlim=(0, fmax), ylim=(min_, max_))
         
         ax.plot(
-            f, X_pss[i,:],
+            f, X_pss[n - 1 - i,:],
             linewidth = 1,
             color='black'
         )
 
         ax.text(
             fmax, mid_, #(max_ - min_)/2,
-            ch_names[i],
+            ch_names[n - 1 - i],
             verticalalignment="center",
             horizontalalignment="left",
             fontdict={"fontsize":fontsize_label}
         )
+
+        for tick in ax.yaxis.get_major_ticks():
+            tick.label.set_fontsize(fontsize_label)
        
 
         # Hide borders
@@ -73,12 +76,10 @@ def plot_psd_v2(X, fs, unit, ch_names,fname = None, scaling = 'density', dpi=Non
     
     # ax.spines["bottom"].set_visible(True)
     ax.set_xticklabels(x_tick)
+    # ax.set_xlabel("Frequency (Hz)",fontdict={"fontsize":fontsize_label})
     
     for tick in ax.xaxis.get_major_ticks():
-        tick.label.set_fontsize(fontsize_label) 
-    
-    ax.set_xlabel("Frequency (Hz)",fontdict={"fontsize":18})
-    # plt.ylabel('ylabel')
+        tick.label.set_fontsize(fontsize_label)
     
     # y label
     ax0 = fig.add_subplot(gs[:, 0])

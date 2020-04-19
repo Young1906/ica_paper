@@ -21,14 +21,16 @@ class EEG():
                            'EEG O1-A2','EEG Fp2-A1','EEG F4-A1','EEG F8-A1','EEG T6-A1','EEG O2-A1'])
         
         # Rename channel name to standard1005 
+        
         raw.rename_channels({'EEG Fp1-A2': 'Fp1','EEG F7-A2': 'F7',
         'EEG F3-A2': 'F3', 'EEG T5-A2': 'T5','EEG O1-A2': 'O1',
         'EEG Fp2-A1': 'Fp2', 'EEG F4-A1': 'F4', 'EEG F8-A1': 'F8',
         'EEG T6-A1': 'T6', 'EEG O2-A1': 'O2'})
+
         raw.set_montage('standard_1005', raise_if_subset=False)
 
         self.raw = raw.copy()
-
+        # import pdb; pdb.set_trace()
         self.meas_date, _ = self.raw.info['meas_date']
         # print(self.meas_date)
         # exit()
